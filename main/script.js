@@ -1,0 +1,1 @@
+var sidebarBtn = document.querySelector(".sidebar__button .btn");
