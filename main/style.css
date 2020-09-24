@@ -3,6 +3,7 @@
   --main-black: #272343;
   --main-blue: #00d1ff;
   --main-red: #ee2a1f;
+  --main-red-hover: #f1544b;
   --main-blue-hover: #00fff0;
   --secondary-blue: #3d6cb9;
 }
@@ -25,18 +26,31 @@ a {
 
 .sidebar {
   height: 100%;
-  width: 25%;
+  width: 30%;
   max-width: 300px;
   position: fixed;
+  margin-left: calc(max(calc(-30% + 30px), -270px));
 
-  padding: 10% 0 20%;
+  padding: 10rem 0 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   justify-content: space-between;
   background: var(--main-white);
-  z-index: 1;
+  transition: all 0.5s ease;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.sidebar.expand {
+  margin-left: 0;
+}
+
+.sidebar:not(.expand) .sidebar__nav a {
+  background: inherit;
+  cursor: default;
+  pointer-events: none;
 }
 
 .sidebar__logo {
@@ -46,7 +60,6 @@ a {
 }
 
 .logo {
-  display: block;
   width: 65%;
   height: auto;
 }
@@ -113,6 +126,12 @@ a {
 
   background: var(--main-red);
   border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar__button:hover {
+  background: var(--main-red-hover);
 }
 
 .sidebar__button i {
