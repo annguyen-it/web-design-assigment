@@ -138,3 +138,21 @@ a {
   font-size: 22px;
   color: var(--main-white);
 }
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  height: 100vh;
+  padding-left: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.5s ease;
+}
+
+.container header {
+  margin-bottom: 100px;
+}

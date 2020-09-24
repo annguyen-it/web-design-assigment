@@ -16,7 +16,7 @@
 <body>
   <div class="page-wrapper">
 
-    <div class="sidebar expand">
+    <div class="sidebar">
       <a href="" class="sidebar__logo">
         <img
           class="logo"
@@ -38,15 +38,22 @@
         <span><a href="#" title="Đăng xuất"><i class="fas fa-sign-out-alt"></i></a></span>
       </div>
 
-      <div class="sidebar__button expand">
-        <i class="dot fas fa-ellipsis-v hidden"></i>
-        <i class="bar fas fa-bars"></i>
+      <div class="sidebar__button">
+        <i class="dot fas fa-ellipsis-v"></i>
+        <i class="bar fas fa-bars hidden"></i>
       </div>
     </div>
 
-    <div class="container"></div>
+    <div class="container">
+      <header>
+        <h1>Doanh thu năm 2020</h1>
+      </header>
+      <canvas id="myChart"></canvas>
+    </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+  <script src="./data.js" type="module"></script>
   <script src="./script.js"></script>
 </body>
 
