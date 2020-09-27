@@ -1,18 +1,88 @@
+.tab-control {
+  display: none;
+}
+
 .list {
+  border-top: 3px var(--main-red) solid;
+  padding-top: 3rem;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
 .list > li {
-  height: 5rem;
+  position: relative;
+  height: 4rem;
   width: 12%;
   text-align: center;
-  background: #00f;
 }
 
 .list > li > label {
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.list span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--main-red);
+  transition: all 0.3s ease;
+}
+
+.tab-control:nth-child(1):checked ~ ul > li:nth-child(1) > span {
+  left: 0;
+  width: 100%;
+}
+.tab-control:nth-child(2):checked ~ ul > li:nth-child(2) > span {
+  left: 0;
+  width: 100%;
+}
+.tab-control:nth-child(3):checked ~ ul > li:nth-child(3) > span {
+  left: 0;
+  width: 100%;
+}
+.tab-control:nth-child(4):checked ~ ul > li:nth-child(4) > span {
+  left: 0;
+  width: 100%;
+}
+.tab-control:nth-child(5):checked ~ ul > li:nth-child(5) > span {
+  left: 0;
+  width: 100%;
+}
+.tab-control:nth-child(6):checked ~ ul > li:nth-child(6) > span {
+  left: 0;
+  width: 100%;
+}
+.tab-control:nth-child(7):checked ~ ul > li:nth-child(7) > span {
+  left: 0;
+  width: 100%;
+}
+
+.list > li > label {
+  display: block;
   height: 100%;
   width: 100%;
-  display: block;
+}
+
+.content-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 700vw;
+  height: 75vh;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.5s ease;
+}
+
+.content > * {
+  width: 100%;
+  padding: 1rem 3rem;
+  z-index: -1;
 }

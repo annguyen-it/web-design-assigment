@@ -23,26 +23,54 @@
         <h1>Quản lý vé</h1>
       </header>
       <main>
-        <input type="radio" id="tab1" name="tab-control" checked>
-        <input type="radio" id="tab2" name="tab-control">
-        <input type="radio" id="tab3" name="tab-control">
-        <input type="radio" id="tab4" name="tab-control">
-        <input type="radio" id="tab5" name="tab-control">
-        <input type="radio" id="tab6" name="tab-control">
-        <input type="radio" id="tab7" name="tab-control">
-        <ul class="list">
-          <li><label for="tab1">Thứ 2</label></li>
-          <li><label for="tab2">Thứ 3</label></li>
-          <li><label for="tab3">Thứ 4</label></li>
-          <li><label for="tab4">Thứ 5</label></li>
-          <li><label for="tab5">Thứ 6</label></li>
-          <li><label for="tab6">Thứ 7</label></li>
-          <li><label for="tab7">Chủ nhật</label></li>
-        </ul>
+        <form name="form" id="form">
+          <input type="radio" id="tab1" class="tab-control" name="tab" value="1" checked>
+          <input type="radio" id="tab2" class="tab-control" name="tab" value="2">
+          <input type="radio" id="tab3" class="tab-control" name="tab" value="3">
+          <input type="radio" id="tab4" class="tab-control" name="tab" value="4">
+          <input type="radio" id="tab5" class="tab-control" name="tab" value="5">
+          <input type="radio" id="tab6" class="tab-control" name="tab" value="6">
+          <input type="radio" id="tab7" class="tab-control" name="tab" value="7">
+          <ul class="list" name="list">
+            <li>
+              <label id="label1" for="tab1" name="label">Thứ 2</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label2" for="tab2" name="label">Thứ 3</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label3" for="tab3" name="label">Thứ 4</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label4" for="tab4" name="label">Thứ 5</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label5" for="tab5" name="label">Thứ 6</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label6" for="tab6" name="label">Thứ 7</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label7" for="tab7" name="label">Chủ nhật</label>
+              <span></span>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="content">
+            </div>
+          </div>
+        </form>
       </main>
     </div>
   </div>
 
+  <script src="./script.js"></script>
   <script src="../script.js"></script>
 </body>
 

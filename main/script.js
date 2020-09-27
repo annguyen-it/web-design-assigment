@@ -4,7 +4,7 @@ fetch("../../src/includes/sidebar/sidebar.html")
   .then(data => document.querySelector(".sidebar").innerHTML = data)
 
 // Sidebar effect
-window.onload = function () {
+window.onload = () => {
   let sidebarBtn = document.querySelector(".sidebar__button")
   sidebarBtn.addEventListener("click", () => {
     let dot = document.querySelector(".sidebar__button .dot")
