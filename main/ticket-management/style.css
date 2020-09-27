@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.list > li {
+  height: 5rem;
+  width: 12%;
+  text-align: center;
+  background: #00f;
+}
+
+.list > li > label {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
