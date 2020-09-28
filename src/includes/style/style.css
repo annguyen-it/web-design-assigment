@@ -1,0 +1,158 @@
+:root {
+  --main-white: #fdf7dc;
+  --main-black: #272343;
+  --main-blue: #00d1ff;
+  --main-red: #ee2a1f;
+  --main-red-hover: #f1544b;
+  --main-blue-hover: #00fff0;
+  --secondary-blue: #3d6cb9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: var(--main-black);
+}
+
+a {
+  color: var(--main-black);
+}
+
+.sidebar {
+  height: 100%;
+  width: 30%;
+  max-width: 300px;
+  position: fixed;
+  margin-left: calc(max(calc(-30% + 30px), -270px));
+
+  padding: 10rem 0 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-between;
+  background: var(--main-white);
+  transition: all 0.5s ease;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  z-index: 2;
+}
+
+.sidebar.expand {
+  margin-left: 0;
+}
+
+.sidebar:not(.expand) .sidebar__nav a {
+  background: inherit;
+  cursor: default;
+  pointer-events: none;
+}
+
+.sidebar__logo {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.logo {
+  width: 65%;
+  height: auto;
+}
+
+.sidebar__nav {
+  width: 100%;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.sidebar__nav a {
+  margin: 1rem 0;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+.sidebar__nav a:hover {
+  background: var(--main-red);
+  color: var(--main-black);
+}
+
+.sidebar_nav a span {
+  display: block;
+  height: 47.5%;
+}
+
+.sidebar__direct {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sidebar__direct a {
+  transition: all 0.1s ease;
+}
+
+.sidebar__direct a:hover {
+  color: var(--main-red);
+}
+
+.sidebar__direct i {
+  font-size: 22px;
+}
+
+.sidebar__button {
+  height: 50px;
+  width: 50px;
+  top: 2rem;
+  right: -25px;
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--main-red);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar__button:hover {
+  background: var(--main-red-hover);
+}
+
+.sidebar__button i {
+  font-size: 22px;
+  color: var(--main-white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100vh;
+
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.container header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.container main {
+}
