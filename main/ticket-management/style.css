@@ -86,3 +86,32 @@
   padding: 1rem 3rem;
   z-index: -1;
 }
+
+/* content */
+
+.timetable {
+  display: flex;
+  flex-direction: column;
+}
+
+.timetable > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timetable > div > span {
+  display: inline-block;
+  height: 20px;
+  width: 50px;
+  background-color: blue;
+}
+
+.timetable > div > span.option {
+  display: inline-block;
+  height: 20px;
+  width: 200px;
+}
+
+.a {
+  color: red;
+}
