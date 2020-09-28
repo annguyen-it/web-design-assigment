@@ -6,8 +6,8 @@ let contents = []
 for (let i = 1; i <= 7; i++) {
   contents.push(`./content${ i }.html`)
 }
-
 let requests = contents.map(content => fetch(content))
+
 Promise.all(requests)
   .then(responses => responses.forEach(
     response => {

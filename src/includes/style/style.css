@@ -156,3 +156,7 @@ a {
 
 .container main {
 }
+
+.container footer {
+  height: 5rem;
+}
