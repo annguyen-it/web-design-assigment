@@ -83,7 +83,7 @@
 .content > * {
   width: 100%;
   padding: 1rem 3rem;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* content */
@@ -93,10 +93,8 @@
   flex-direction: row;
 }
 
-.pics > img:hover {
-  background-color: aquamarine;
-  border: solid;
-  border-width: 10px;
+div.pics > img:hover {
+  border: 3px #000 solid;
 }
 
 .timetable {
