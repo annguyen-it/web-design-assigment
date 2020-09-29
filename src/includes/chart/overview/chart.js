@@ -1,4 +1,4 @@
-// Chart in main/index.js
+// Chart in main/overview/index.js
 let ctx = document.getElementById('chart')
 let myChart = new Chart(ctx, {
   type: 'bar',
@@ -7,11 +7,11 @@ let myChart = new Chart(ctx, {
     datasets: [{
       label: ['Bán vé'],
       data: [12, 19, 3, 5, 2, 3, 2, 5, 16],
-      backgroundColor: 'rgba(255, 99, 132, 1)'
+      backgroundColor: '#ff6384'
     }, {
       label: ['Đồ ăn/uống'],
       data: [2, 9, 3, 5, 2, 13, 12, 5, 1],
-      backgroundColor: 'rgba(99, 99, 132, 1)'
+      backgroundColor: '#636384'
     }]
   },
   options: {
