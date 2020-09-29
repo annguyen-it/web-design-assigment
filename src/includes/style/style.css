@@ -49,6 +49,7 @@ a {
   margin-left: 0;
 }
 
+.sidebar:not(.expand) .sidebar__logo,
 .sidebar:not(.expand) .sidebar__nav a {
   background: inherit;
   cursor: default;
