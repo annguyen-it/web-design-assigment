@@ -4,7 +4,7 @@
 
 .list {
   border-top: 3px var(--main-red) solid;
-  padding-top: 3rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -12,7 +12,7 @@
 
 .list > li {
   position: relative;
-  height: 4rem;
+  height: 2.5rem;
   width: 12%;
   text-align: center;
 }
@@ -70,6 +70,7 @@
 
 .content-wrapper {
   width: 100%;
+  margin-top: 2rem;
   overflow: hidden;
 }
 
