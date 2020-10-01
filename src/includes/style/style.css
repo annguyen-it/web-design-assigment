@@ -1,11 +1,15 @@
 :root {
   --main-white: #fdf7dc;
   --main-black: #272343;
+  --main-grey: #bbbbbb;
   --main-blue: #00d1ff;
-  --main-red: #ee2a1f;
-  --main-red-hover: #f1544b;
   --main-blue-hover: #00fff0;
   --secondary-blue: #3d6cb9;
+  --main-green: #01c73c;
+  --main-red: #ee2a1f;
+  --main-red-hover: #f1544b;
+  --main-pink: #ff62b0;
+  --main-brown: #b11500;
 }
 
 * {
@@ -236,6 +240,10 @@ a {
   max-width: 1200px;
   margin: auto;
   padding: 40px;
+}
+
+.container main > * {
+  margin: auto;
 }
 
 .container footer {

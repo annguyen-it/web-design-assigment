@@ -1,5 +1,5 @@
 // Include sidebar
-fetch('../../src/includes/sidebar/sidebar.html')
+fetch('/src/includes/sidebar/sidebar.html')
   .then(res => res.text())
   .then(data => document.querySelector('.sidebar').innerHTML = data)
   .then(() => {
