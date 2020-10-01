@@ -1,0 +1,106 @@
+main {
+  border: 1px solid var(--main-grey);
+  margin-top: -3rem !important;
+}
+
+.info {
+  padding: 0 5rem;
+}
+
+.box {
+  margin-top: 3rem !important;
+}
+
+.box > * {
+  margin: auto;
+}
+
+.screen {
+  width: 55%;
+  height: 5px;
+  background: #000;
+  filter: drop-shadow(0 15px 10px var(--main-red));
+}
+
+#table {
+  margin-top: 7rem;
+}
+
+table td {
+  padding: 5px;
+}
+
+table tr.normal div {
+  box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+}
+
+table tr.vip div {
+  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+}
+
+table tr.sweetbox div {
+  color: var(--main-white);
+  background: var(--main-pink);
+}
+
+table td:not(.hide) div {
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+
+  text-align: center;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+table td.choose:not(.taken) div {
+  color: var(--main-white);
+  background: var(--main-brown);
+  box-shadow: none;
+}
+
+table td.taken div {
+  color: var(--main-white);
+  background: var(--main-grey);
+  box-shadow: none;
+  cursor: default;
+}
+
+.notice {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.notice > div {
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.notice > div > div {
+  height: 30px;
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.notice > div:nth-child(1) > div {
+  background: var(--main-brown);
+}
+
+.notice > div:nth-child(2) > div {
+  background: var(--main-grey);
+}
+
+.notice > div:nth-child(3) > div {
+  box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+}
+
+.notice > div:nth-child(4) > div {
+  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+}
+
+.notice > div:nth-child(5) > div {
+  background: var(--main-pink);
+}
