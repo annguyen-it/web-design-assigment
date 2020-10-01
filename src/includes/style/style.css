@@ -16,6 +16,7 @@
 }
 
 body {
+  min-width: 680px;
   font-size: 14px;
   color: var(--main-black);
 }
@@ -48,6 +49,7 @@ a {
   margin-left: 0;
 }
 
+.sidebar:not(.expand) .sidebar__logo,
 .sidebar:not(.expand) .sidebar__nav a {
   background: inherit;
   cursor: default;
@@ -117,7 +119,7 @@ a {
 .sidebar__button {
   height: 50px;
   width: 50px;
-  top: 2rem;
+  top: 50px;
   right: -25px;
 
   position: absolute;
@@ -140,6 +142,80 @@ a {
   color: var(--main-white);
 }
 
+.dot,
+.bar {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-top: calc(-100vh + 45px * 2);
+    background: var(--main-red);
+  }
+
+  .sidebar.expand {
+    margin-top: 0;
+  }
+
+  .sidebar__logo {
+    display: none;
+  }
+
+  .sidebar__nav {
+    margin-top: 5rem;
+  }
+
+  .sidebar__nav a {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    color: var(--main-white);
+  }
+
+  .sidebar__nav a:hover {
+    color: var(--main-white);
+    background: var(--main-red-hover);
+  }
+
+  .sidebar__direct {
+    width: 50%;
+    margin-bottom: -5rem;
+  }
+
+  .sidebar__direct a {
+    color: var(--main-white);
+    transition: all 0.1s ease;
+  }
+
+  .sidebar__direct a:hover {
+    color: #ffee00;
+  }
+
+  .sidebar__button {
+    height: 50px;
+    width: 50px;
+    top: 12px;
+    right: 50px;
+
+    position: fixed;
+    background: transparent;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  .bar {
+    display: block !important;
+  }
+
+  .container {
+    padding-top: 10rem;
+  }
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -155,4 +231,13 @@ a {
 }
 
 .container main {
+  width: 100%;
+}
+
+.container footer {
+  height: 5rem;
+}
+
+.foo {
+  background: #f00;
 }

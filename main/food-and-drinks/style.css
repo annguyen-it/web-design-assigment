@@ -1,0 +1,55 @@
+#chart {
+  margin-top: 20rem;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.products-list {
+  display: block;
+  list-style: none;
+  justify-content: space-around;
+  padding-top: 2.5rem;
+}
+
+.item.first {
+  float: left;
+  width: 49%;
+}
+
+.item.second {
+  float: right;
+  width: 49%;
+}
+
+.item {
+  display: flex;
+  align-items: stretch;
+}
+
+.item img {
+  height: 150px;
+  width: 150px;
+}
+
+.item h5.name {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.product-info {
+  margin-left: 1rem;
+}
+
+.action > * {
+  display: inline;
+}
+
+.items-left {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px var(--main-red) solid;
+  cursor: default;
+}
