@@ -73,10 +73,12 @@ input {
 #login {
   padding: 1rem 0;
   margin: 2rem 0 1rem;
+
   color: var(--main-white);
   background: var(--main-red);
   border-radius: 2em;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 #login:hover {

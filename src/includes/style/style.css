@@ -1,11 +1,15 @@
 :root {
   --main-white: #fdf7dc;
   --main-black: #272343;
+  --main-grey: #bbbbbb;
   --main-blue: #00d1ff;
-  --main-red: #ee2a1f;
-  --main-red-hover: #f1544b;
   --main-blue-hover: #00fff0;
   --secondary-blue: #3d6cb9;
+  --main-green: #01c73c;
+  --main-red: #ee2a1f;
+  --main-red-hover: #f1544b;
+  --main-pink: #ff62b0;
+  --main-brown: #b11500;
 }
 
 * {
@@ -16,7 +20,7 @@
 }
 
 body {
-  min-width: 680px;
+  font-family: 'IBM Plex Sans';
   font-size: 14px;
   color: var(--main-black);
 }
@@ -59,12 +63,13 @@ a {
 .sidebar__logo {
   display: flex;
   justify-content: center;
-  width: auto;
+  transform: translateY(-4rem);
 }
 
 .logo {
   width: 65%;
   height: auto;
+  transform: translateX(0.5rem);
 }
 
 .sidebar__nav {
@@ -147,6 +152,10 @@ a {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .sidebar {
     width: 100%;
@@ -217,27 +226,27 @@ a {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  height: 100vh;
-
-  align-items: center;
-  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .container header {
   text-align: center;
-  margin-bottom: 100px;
+  margin: 5rem 0;
 }
 
 .container main {
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+.container main > * {
+  margin: auto;
 }
 
 .container footer {
-  height: 5rem;
-}
-
-.foo {
-  background: #f00;
+  height: 3rem;
+  width: 100vw;
 }
