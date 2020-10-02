@@ -75,13 +75,15 @@
 }
 
 .content {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   transition: all 0.5s ease;
 }
 
 .content > * {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 1rem 3rem;
   z-index: 0;
@@ -91,46 +93,102 @@
   display: none;
 }
 
-/* content */
-
-.movie {
-  display: flex;
-  flex-direction: row;
+.name {
+  text-transform: uppercase;
 }
 
-div.pics > img:hover {
-  border: 3px #000 solid;
+.name h2 {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 30px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.name span {
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 2px 15px;
+  color: var(--main-white);
+  font-family: 'Piazzolla', serif;
+  font-size: 20px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.icon-p {
+  background: var(--main-green);
+}
+
+.icon-13 {
+  background: var(--main-yellow);
+}
+
+.icon-18 {
+  background: var(--main-red);
+}
+
+.info {
+  margin-top: 1rem;
+}
+
+.info * {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.pics {
+  width: 30%;
+  min-width: 190px;
+  max-width: 280px;
+  float: left;
+}
+
+.pics > img {
+  width: 100%;
+  height: auto;
 }
 
 .timetable {
+  width: 65%;
+  float: left;
+  margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
 }
 
 .timetable > div {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  width: 660px;
+  overflow: auto;
+  overflow-wrap: break-word;
 }
 
-.timetable > div > div {
-  padding: 9px 10px 10px 10px;
-  margin: 5px;
+.timetable > div > a {
   height: 38px;
   width: 98px;
-  border: solid;
-  border-width: 1px;
+  padding: 9px 0;
+  margin: 5px;
+
   text-align: center;
+  text-decoration: none;
+  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+  transition: all 0.2s ease;
+}
+
+.timetable > div > a:hover {
+  box-shadow: inset 2px 2px var(--main-red), inset -2px -2px var(--main-red), 0 0 2px var(--main-red);
 }
 
 .timetable > div > span.option {
-  margin: 5px;
-  border: none;
-  display: inline-block;
   height: 20px;
-  width: 630px;
-  font-weight: bold;
+  width: 100%;
+  display: inline-block;
+
+  margin: 5px;
+  font-weight: 600;
+  border: none;
 }
 
 .hr {
