@@ -1,6 +1,21 @@
 // Draw map
 let table = document.getElementById('table')
-let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j']
+let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+let seats = {
+  a: [],
+  b: [],
+  c: [],
+  d: [],
+  e: [],
+  f: [],
+  g: [],
+  h: [],
+  i: []
+}
+let cash = 0
+const normalPrice = 90000
+const vipPrice = 120000
+const sweetboxPrice = 280000
 
 for (let i = 0; i < 9; i++) {
   let row = table.insertRow(table.rows.length)
@@ -67,9 +82,11 @@ for (let i = 0; i < 9; i++) {
         cell.addEventListener('click', () => {
           if (cell.classList.contains('choose')) {
             cell.classList.remove('choose')
+            remove(i, j)
           }
           else {
             cell.classList.add('choose')
+            add(i, j)
           }
         })
       }
@@ -81,10 +98,12 @@ for (let i = 0; i < 9; i++) {
             if (cell.classList.contains('choose')) {
               cell.classList.remove('choose')
               table.rows[i].cells[j + 1].classList.remove('choose')
+              remove(i, j)
             }
             else {
               cell.classList.add('choose')
               table.rows[i].cells[j + 1].classList.add('choose')
+              add(i, j)
             }
           })
         }
@@ -93,10 +112,12 @@ for (let i = 0; i < 9; i++) {
             if (cell.classList.contains('choose')) {
               cell.classList.remove('choose')
               table.rows[i].cells[j - 1].classList.remove('choose')
+              remove(i, j)
             }
             else {
               cell.classList.add('choose')
               table.rows[i].cells[j - 1].classList.add('choose')
+              add(i, j)
             }
           })
         }
@@ -110,3 +131,114 @@ document.getElementById('room').innerHTML = 'Phòng chiếu số ' + Math.round(
 
 // Count taken
 document.getElementById('seat-taken').innerHTML = 'Số ghế: ' + (118 - taken) + '/118'
+
+// Add seat to array
+function add(row, col) {
+  if (!table.rows[row].cells[col].classList.contains('taken')) {
+    if (row <= 7) {
+      cash += (row <= 2 ? normalPrice : vipPrice)
+
+      seats[String.fromCharCode('a'.charCodeAt(0) + row)].push(col)
+      seats[String.fromCharCode('a'.charCodeAt(0) + row)].sort((a, b) => a - b)
+    }
+    else {
+      cash += sweetboxPrice
+
+      if (col % 2 == 1) {
+        seats[String.fromCharCode('a'.charCodeAt(0) + row)].push(col)
+        seats[String.fromCharCode('a'.charCodeAt(0) + row)].push(col + 1)
+        seats[String.fromCharCode('a'.charCodeAt(0) + row)].sort((a, b) => a - b)
+      }
+      else {
+        seats[String.fromCharCode('a'.charCodeAt(0) + row)].push(col)
+        seats[String.fromCharCode('a'.charCodeAt(0) + row)].push(col - 1)
+        seats[String.fromCharCode('a'.charCodeAt(0) + row)].sort((a, b) => a - b)
+      }
+    }
+
+    update()
+  }
+}
+
+// Remove seat from array
+function remove(row, col) {
+  for (let i = 0; i <= 16; i++) {
+    if (seats[String.fromCharCode('a'.charCodeAt(0) + row)][i] == col) {
+      if (row <= 7) {
+        cash -= (row <= 2 ? normalPrice : vipPrice)
+
+        seats[String.fromCharCode('a'.charCodeAt(0) + row)].splice(i, 1)
+        break
+      }
+      else {
+        cash -= sweetboxPrice
+
+        if (col % 2 == 1) {
+          seats[String.fromCharCode('a'.charCodeAt(0) + row)].splice(i, 2)
+          break
+        }
+        else {
+          seats[String.fromCharCode('a'.charCodeAt(0) + row)].splice(i - 1, 2)
+          break
+        }
+      }
+    }
+  }
+
+  update()
+}
+
+// Calculate money
+function update() {
+  let seatData = []
+  let total = numeral(cash)
+  document.querySelector('.cash__total > span').innerHTML = total.format('0,0.00') + '<sup>đ</sup>'
+
+  for (let i = 0; i <= 8; i++) {
+    let row = String.fromCharCode('a'.charCodeAt(0) + i)
+    if (seats[row].length) {
+      seats[row].forEach((item) => {
+        seatData.push((row.toUpperCase() + (item + 1)))
+      })
+    }
+  }
+
+  document.querySelector('.cash__seat > span').innerHTML = seatData.join(', ')
+}
+
+function confirm() {
+  for (let i = 0; i <= 8; i++) {
+    let row = String.fromCharCode('a'.charCodeAt(0) + i)
+    if (seats[row].length) {
+      seats[row].forEach(col => {
+        table.rows[i].cells[col].classList.add('taken')
+        taken++
+      })
+
+      seats[row] = []
+    }
+  }
+
+  cash = 0
+  update()
+
+  setTimeout(() => {
+    window.location.replace('/main/food-and-drinks/')
+  }, 2000)
+}
+
+function cancel() {
+  for (let i = 0; i <= 8; i++) {
+    let row = String.fromCharCode('a'.charCodeAt(0) + i)
+    if (seats[row].length) {
+      seats[row].forEach(col => {
+        table.rows[i].cells[col].classList.remove('choose')
+      })
+
+      seats[row] = []
+    }
+  }
+
+  cash = 0
+  update()
+}
