@@ -18,7 +18,7 @@ function getData() {
       xhttp.onreadystatechange = function () {
         if (this.readyState === 4) {
           if (this.status === 200) {
-            parent.innerHTML = this.responseText
+            parent.innerHTML = this.responseText;
           }
 
           element.removeAttribute('w3-school')
