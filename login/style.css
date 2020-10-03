@@ -57,7 +57,7 @@ form > div > label {
 form > div > input {
   width: 60%;
   float: right;
-  padding: 0.3rem 0 0.3rem 1rem;
+  padding: 0.3rem 0 0.3rem 0.5rem;
   border-radius: 0.2em;
   transition: all 0.25s ease;
 }
