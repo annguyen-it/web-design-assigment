@@ -39,8 +39,16 @@ ul.products-list {
   margin-left: 1rem;
 }
 
-.action > * {
-  display: inline;
+.action {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.control {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .items-left {
@@ -48,4 +56,85 @@ ul.products-list {
   padding: 3px 10px;
   border: 1px var(--main-red) solid;
   cursor: default;
+}
+
+#bottom-content {
+  margin-top: 3rem;
+  padding: 0 9rem;
+}
+
+.paid {
+  float: left;
+}
+
+.paid table {
+  padding: 2rem;
+  border: 1px solid var(--main-red);
+  border-radius: 0.5em;
+}
+
+.paid td:nth-child(2) {
+  padding-left: 10px;
+}
+
+.btn {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fefefe;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+
+  border-radius: 50%;
+  background: var(--main-red);
+  transition: all 0.2s ease;
+
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn.disable {
+  background: var(--main-grey);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  float: right;
+  margin-top: 2.5rem;
+}
+
+.buttons > input[type='submit'] {
+  width: 100px;
+  height: 50px;
+  margin: 0 1rem;
+
+  color: #fefefe;
+  border-radius: 0.5em;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.confirm {
+  background: var(--main-green);
+}
+
+.confirm:hover {
+  background: var(--main-green-hover);
+}
+
+.cancel {
+  background: var(--main-red);
+}
+
+.cancel:hover,
+.btn:not(.disable):hover {
+  background: var(--main-red-hover);
 }

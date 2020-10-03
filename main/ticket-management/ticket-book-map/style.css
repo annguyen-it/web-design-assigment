@@ -1,17 +1,21 @@
 main {
+  margin-top: -5rem !important;
+}
+
+.box {
   border: 1px solid var(--main-grey);
-  margin-top: -3rem !important;
+  padding: 2rem 0;
 }
 
 .info {
   padding: 0 5rem;
 }
 
-.box {
+.box-seat {
   margin-top: 3rem !important;
 }
 
-.box > * {
+.box-seat > * {
   margin: auto;
 }
 
@@ -64,7 +68,7 @@ table td.taken div {
   color: var(--main-white);
   background: var(--main-grey);
   box-shadow: none;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .notice {
@@ -103,4 +107,48 @@ table td.taken div {
 
 .notice > div:nth-child(5) > div {
   background: var(--main-pink);
+}
+
+.bottom-info {
+  height: 100px;
+  padding: 3rem 5rem;
+}
+
+.cash {
+  width: 60%;
+  float: left;
+}
+
+.buttons {
+  float: right;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons > input[type='submit'] {
+  width: 100px;
+  height: 50px;
+  margin: 0 1rem;
+
+  color: #fefefe;
+  border-radius: 0.5em;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.confirm {
+  background: var(--main-green);
+}
+
+.confirm:hover {
+  background: var(--main-green-hover);
+}
+
+.cancel {
+  background: var(--main-red);
+}
+
+.cancel:hover {
+  background: var(--main-red-hover);
 }
