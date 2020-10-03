@@ -1,3 +1,8 @@
+// Redirect if haven't logged in yet
+if (!sessionStorage.getItem('role')) {
+  window.location.replace('/login/')
+}
+
 // Include sidebar
 fetch('/src/includes/sidebar/sidebar.html')
   .then(res => res.text())
@@ -27,3 +32,8 @@ fetch('/src/includes/sidebar/sidebar.html')
       })
     }
   })
+
+function logout() {
+  sessionStorage.removeItem('role')
+  window.location.reload('/login/')
+}
