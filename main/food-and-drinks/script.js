@@ -66,6 +66,10 @@ increaseBtn.forEach((item, index) => {
       update()
     }
   })
+
+  if (itemsLeft[index].innerHTML == '0') {
+    increaseBtn[index].classList.add('disable')
+  }
 })
 
 // Calculate total paid for food and drinks
