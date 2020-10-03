@@ -13,9 +13,9 @@ let seats = {
   i: []
 }
 let cash = 0
-const normalPrice = 90000
-const vipPrice = 120000
-const sweetboxPrice = 280000
+const normalPrice = 90
+const vipPrice = 120
+const sweetboxPrice = 280
 
 for (let i = 0; i < 9; i++) {
   let row = table.insertRow(table.rows.length)
@@ -70,6 +70,7 @@ for (let i = 1; i <= 10; i++) {
   }
 }
 
+// Add event listener
 for (let i = 0; i < 9; i++) {
   for (let j = 0; j < 16; j++) {
     const cell = table.rows[i].cells[j]
@@ -188,17 +189,20 @@ function remove(row, col) {
   update()
 }
 
-// Calculate money
+// Update information
 function update() {
-  let seatData = []
-  let total = numeral(cash)
+  // Update paid
+  let total = numeral(cash * 1000)
   document.querySelector('.cash__total > span').innerHTML = total.format('0,0.00') + '<sup>đ</sup>'
+
+  // Update seat list
+  let seatData = []
 
   for (let i = 0; i <= 8; i++) {
     let row = String.fromCharCode('a'.charCodeAt(0) + i)
     if (seats[row].length) {
-      seats[row].forEach((item) => {
-        seatData.push((row.toUpperCase() + (item + 1)))
+      seats[row].forEach((col) => {
+        seatData.push((row.toUpperCase() + (col + 1)))
       })
     }
   }
@@ -207,10 +211,13 @@ function update() {
 }
 
 function confirm() {
+  let seatChecked = []
+
   for (let i = 0; i <= 8; i++) {
     let row = String.fromCharCode('a'.charCodeAt(0) + i)
     if (seats[row].length) {
       seats[row].forEach(col => {
+        seatChecked.push((row.toUpperCase() + col))
         table.rows[i].cells[col].classList.add('taken')
         taken++
       })
@@ -219,12 +226,14 @@ function confirm() {
     }
   }
 
-  cash = 0
-  update()
+  if (seatChecked.length) {
+    update()
+    document.getElementById('seat-taken').innerHTML = 'Số ghế: ' + (118 - taken) + '/118'
 
-  setTimeout(() => {
-    window.location.replace('/main/food-and-drinks/')
-  }, 2000)
+    setTimeout(() => {
+      window.location.replace('/main/food-and-drinks/?' + `t=${ cash }`)
+    }, 2000)
+  }
 }
 
 function cancel() {
