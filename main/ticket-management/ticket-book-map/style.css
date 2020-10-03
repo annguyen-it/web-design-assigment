@@ -1,0 +1,154 @@
+main {
+  margin-top: -5rem !important;
+}
+
+.box {
+  border: 1px solid var(--main-grey);
+  padding: 2rem 0;
+}
+
+.info {
+  padding: 0 5rem;
+}
+
+.box-seat {
+  margin-top: 3rem !important;
+}
+
+.box-seat > * {
+  margin: auto;
+}
+
+.screen {
+  width: 55%;
+  height: 5px;
+  background: #000;
+  filter: drop-shadow(0 15px 10px var(--main-red));
+}
+
+#table {
+  margin-top: 7rem;
+}
+
+table td {
+  padding: 5px;
+}
+
+table tr.normal div {
+  box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+}
+
+table tr.vip div {
+  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+}
+
+table tr.sweetbox div {
+  color: var(--main-white);
+  background: var(--main-pink);
+}
+
+table td:not(.hide) div {
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+
+  text-align: center;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+table td.choose:not(.taken) div {
+  color: var(--main-white);
+  background: var(--main-brown);
+  box-shadow: none;
+}
+
+table td.taken div {
+  color: var(--main-white);
+  background: var(--main-grey);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.notice {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.notice > div {
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.notice > div > div {
+  height: 30px;
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.notice > div:nth-child(1) > div {
+  background: var(--main-brown);
+}
+
+.notice > div:nth-child(2) > div {
+  background: var(--main-grey);
+}
+
+.notice > div:nth-child(3) > div {
+  box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+}
+
+.notice > div:nth-child(4) > div {
+  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+}
+
+.notice > div:nth-child(5) > div {
+  background: var(--main-pink);
+}
+
+.bottom-info {
+  height: 100px;
+  padding: 3rem 5rem;
+}
+
+.cash {
+  width: 60%;
+  float: left;
+}
+
+.buttons {
+  float: right;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons > input[type='submit'] {
+  width: 100px;
+  height: 50px;
+  margin: 0 1rem;
+
+  color: #fefefe;
+  border-radius: 0.5em;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.confirm {
+  background: var(--main-green);
+}
+
+.confirm:hover {
+  background: var(--main-green-hover);
+}
+
+.cancel {
+  background: var(--main-red);
+}
+
+.cancel:hover {
+  background: var(--main-red-hover);
+}
