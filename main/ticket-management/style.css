@@ -264,3 +264,12 @@
   margin: 20px 0;
   background-color: #ee2a1f;
 }
+
+@media (max-width: 800px) {
+  .list {
+    top: 100px;
+  }
+  .content > * {
+    padding: 5px;
+  }
+}
