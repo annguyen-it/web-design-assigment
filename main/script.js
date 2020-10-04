@@ -33,6 +33,7 @@ fetch('/src/includes/sidebar/sidebar.html')
     }
   })
 
+// Logout function
 function logout() {
   sessionStorage.removeItem('role')
   window.location.reload('/login/')

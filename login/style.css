@@ -84,3 +84,14 @@ input {
 #login:hover {
   background: var(--main-red-hover);
 }
+
+.notification {
+  visibility: visible;
+  color: #272343;
+  transition: all 0.2s ease;
+}
+
+.notification.hide {
+  visibility: hidden;
+  color: transparent;
+}
