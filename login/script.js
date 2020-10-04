@@ -28,3 +28,14 @@ function validate() {
 function hideNotification() {
   document.querySelector('.notification').classList.add('hide')
 }
+
+document.querySelector('#password').addEventListener('keypress', e => {
+  if (e.key === 'Enter') {
+    validate()
+  }
+})
+document.querySelector('#username').addEventListener('keypress', e => {
+  if (e.key === 'Enter') {
+    validate()
+  }
+})

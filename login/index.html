@@ -18,11 +18,11 @@
       <form method="get" name="form">
         <div>
           <label for="username">Tên đăng nhập: </label>
-          <input type="text" name="" id="username" onfocus="hideNotification()">
+          <input type="text" name="username" id="username" onfocus="hideNotification()" oninput="hideNotification()">
         </div>
         <div>
           <label for="password">Mật khẩu:</label>
-          <input type="password" name="" id="password" onfocus="hideNotification()">
+          <input type="password" name="password" id="password" onfocus="hideNotification()" oninput="hideNotification()">
         </div>
         <input type="button" value="Đăng nhập" onclick="validate()" id="login">
         <div class="notification hide">Thông tin đăng nhập không đúng! Hãy thử lại</div>
