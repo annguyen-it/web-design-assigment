@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Quản lý vé</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Demo Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/9ed593a796.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../../src/includes/style/style.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="sidebar"></div>
+
+    <div class="container">
+      <header>
+        <h1>Quản lý vé</h1>
+      </header>
+
+      <main>
+        <form name="form" id="form">
+          <input type="radio" id="tab1" class="tab-control" name="tab" value="1" checked>
+          <input type="radio" id="tab2" class="tab-control" name="tab" value="2">
+          <input type="radio" id="tab3" class="tab-control" name="tab" value="3">
+          <input type="radio" id="tab4" class="tab-control" name="tab" value="4">
+          <input type="radio" id="tab5" class="tab-control" name="tab" value="5">
+          <input type="radio" id="tab6" class="tab-control" name="tab" value="6">
+          <input type="radio" id="tab7" class="tab-control" name="tab" value="7">
+          <div id="list-top"></div>
+          <ul class="list" name="list">
+            <li>
+              <label id="label1" for="tab1" name="label">Thứ 2</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label2" for="tab2" name="label">Thứ 3</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label3" for="tab3" name="label">Thứ 4</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label4" for="tab4" name="label">Thứ 5</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label5" for="tab5" name="label">Thứ 6</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label6" for="tab6" name="label">Thứ 7</label>
+              <span></span>
+            </li>
+            <li>
+              <label id="label7" for="tab7" name="label">Chủ nhật</label>
+              <span></span>
+            </li>
+          </ul>
+
+          <div class="content-wrapper">
+            <div class="content">
+            </div>
+          </div>
+        </form>
+      </main>
+
+      <footer></footer>
+    </div>
+
+    <footer></footer>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="../script.js"></script>
+</body>
+
+</html>
