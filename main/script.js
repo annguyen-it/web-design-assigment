@@ -9,27 +9,38 @@ fetch('/src/includes/sidebar/sidebar.html')
   .then(data => document.querySelector('.sidebar').innerHTML = data)
   .then(() => {
     // Sidebar effect
-    let sidebarBtn = document.querySelector('.sidebar__button')
 
-    document.querySelector('.sidebar__button').addEventListener('click', () => {
-      let dot = document.querySelector('.sidebar__button .dot')
-      let bar = document.querySelector('.sidebar__button .bar')
-      let sidebar = document.querySelector('.sidebar')
+    document.querySelector('.sidebar__button').addEventListener('click', e => {
+      expandSidebar()
+    })
 
-      if (sidebarBtn.classList.contains('expand')) {
-        sidebar.classList.remove('expand')
-        sidebarBtn.classList.remove('expand')
-        dot.classList.remove('hidden')
-        bar.classList.add('hidden')
-      }
-      else {
-        sidebar.classList.add('expand')
-        sidebarBtn.classList.add('expand')
-        dot.classList.add('hidden')
-        bar.classList.remove('hidden')
+    document.querySelector('.container').addEventListener('click', e => {
+      let sidebar = document.querySelector('.sidebar__button')
+      if (sidebar.classList.contains('expand')) {
+        expandSidebar()
       }
     })
   })
+
+function expandSidebar() {
+  let sidebarBtn = document.querySelector('.sidebar__button')
+  let dot = document.querySelector('.sidebar__button .dot')
+  let bar = document.querySelector('.sidebar__button .bar')
+  let sidebar = document.querySelector('.sidebar')
+
+  if (sidebarBtn.classList.contains('expand')) {
+    sidebar.classList.remove('expand')
+    sidebarBtn.classList.remove('expand')
+    dot.classList.remove('hidden')
+    bar.classList.add('hidden')
+  }
+  else {
+    sidebar.classList.add('expand')
+    sidebarBtn.classList.add('expand')
+    dot.classList.add('hidden')
+    bar.classList.remove('hidden')
+  }
+}
 
 // Logout function
 function logout() {
