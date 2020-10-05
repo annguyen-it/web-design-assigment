@@ -1,11 +1,17 @@
 :root {
   --main-white: #fdf7dc;
   --main-black: #272343;
+  --main-grey: #bbbbbb;
   --main-blue: #00d1ff;
-  --main-red: #ee2a1f;
-  --main-red-hover: #f1544b;
   --main-blue-hover: #00fff0;
   --secondary-blue: #3d6cb9;
+  --main-green: #01c73c;
+  --main-green-hover: #4dd776;
+  --main-red: #ee2a1f;
+  --main-red-hover: #f1544b;
+  --main-pink: #ff62b0;
+  --main-brown: #b11500;
+  --main-yellow: #fccc1d;
 }
 
 * {
@@ -16,7 +22,7 @@
 }
 
 body {
-  min-width: 680px;
+  font-family: 'IBM Plex Sans';
   font-size: 14px;
   color: var(--main-black);
 }
@@ -49,6 +55,7 @@ a {
   margin-left: 0;
 }
 
+.sidebar:not(.expand) .sidebar__logo,
 .sidebar:not(.expand) .sidebar__nav a {
   background: inherit;
   cursor: default;
@@ -58,12 +65,13 @@ a {
 .sidebar__logo {
   display: flex;
   justify-content: center;
-  width: auto;
+  transform: translateY(-4rem);
 }
 
 .logo {
   width: 65%;
   height: auto;
+  transform: translateX(0.5rem);
 }
 
 .sidebar__nav {
@@ -146,12 +154,19 @@ a {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .sidebar {
     width: 100%;
+    height: 100vh;
     max-width: none;
+
     margin-left: 0;
-    margin-top: calc(-100vh + 45px * 2);
+    margin-top: calc(-100vh + 50px * 2);
+    padding: 5rem 0;
     background: var(--main-red);
   }
 
@@ -161,10 +176,6 @@ a {
 
   .sidebar__logo {
     display: none;
-  }
-
-  .sidebar__nav {
-    margin-top: 5rem;
   }
 
   .sidebar__nav a {
@@ -180,7 +191,7 @@ a {
 
   .sidebar__direct {
     width: 50%;
-    margin-bottom: -5rem;
+    margin-bottom: 15rem;
   }
 
   .sidebar__direct a {
@@ -195,8 +206,8 @@ a {
   .sidebar__button {
     height: 50px;
     width: 50px;
-    top: 12px;
-    right: 50px;
+    top: 25px;
+    right: 35px;
 
     position: fixed;
     background: transparent;
@@ -216,27 +227,27 @@ a {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  height: 100vh;
-
-  align-items: center;
-  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .container header {
   text-align: center;
-  margin-bottom: 100px;
+  margin: 5rem 0;
 }
 
 .container main {
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+.container main > * {
+  margin: auto;
 }
 
 .container footer {
-  height: 5rem;
-}
-
-.foo {
-  background: #f00;
+  height: 3rem;
+  width: 100vw;
 }

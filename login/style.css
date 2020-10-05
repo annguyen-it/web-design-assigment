@@ -1,0 +1,86 @@
+:root {
+  --main-white: #fdf7dc;
+  --main-black: #272343;
+  --main-blue: #00d1ff;
+  --main-red: #ee2a1f;
+  --main-red-hover: #f1544b;
+  --main-blue-hover: #00fff0;
+  --secondary-blue: #3d6cb9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-white);
+}
+
+input {
+  outline: none;
+}
+
+main {
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #fefefe;
+  border: 1px var(--main-red) solid;
+  border-radius: 0.2em;
+}
+
+form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  margin: 0.5rem 0;
+}
+
+form > div > label {
+  width: 40%;
+  float: left;
+}
+
+form > div > input {
+  width: 60%;
+  float: right;
+  padding: 0.3rem 0 0.3rem 0.5rem;
+  border-radius: 0.2em;
+  transition: all 0.25s ease;
+}
+
+form > div > input:focus {
+  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
+}
+
+input {
+  border: 1px var(--main-red) solid;
+}
+
+#login {
+  padding: 1rem 0;
+  margin: 2rem 0 1rem;
+
+  color: var(--main-white);
+  background: var(--main-red);
+  border-radius: 2em;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+#login:hover {
+  background: var(--main-red-hover);
+}
