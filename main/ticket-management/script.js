@@ -18,7 +18,7 @@ function getData() {
       xhttp.onreadystatechange = function () {
         if (this.readyState === 4) {
           if (this.status === 200) {
-            parent.innerHTML = this.responseText
+            parent.innerHTML = this.responseText;
           }
 
           element.removeAttribute('w3-school')
@@ -51,3 +51,19 @@ tabs.forEach((tab, index) => {
     }
   })
 })
+
+// Sticky nav
+// Stickyfill.add(document.querySelector('.list'))
+
+var observer = new IntersectionObserver(function (e) {
+  if (e[0].intersectionRatio === 0) {
+    document.querySelector('.list').classList.add('scroll')
+  }
+  else if (e[0].intersectionRatio === 1) {
+    document.querySelector('.list').classList.remove('scroll')
+  }
+}, {
+  threshold: [0, 1]
+})
+
+observer.observe(document.querySelector('#list-top'))
