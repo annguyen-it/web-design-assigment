@@ -19,7 +19,6 @@ document.querySelectorAll('.price > span').forEach((item, index) => {
   item.innerHTML = format(itemPrices[index])
 })
 
-
 // Print ticket paid
 document.querySelector('#ticket-paid span').innerHTML = format(ticketPaid)
 
@@ -34,46 +33,60 @@ let picked = document.querySelectorAll('.items-buy')
 let decreaseBtn = document.querySelectorAll('.btn.decrease')
 let increaseBtn = document.querySelectorAll('.btn.increase')
 
-decreaseBtn.forEach((item, index) => {
-  item.addEventListener('click', function checkDecrease() {
-    if (picked[index].innerHTML != '0') {
-      picked[index].innerHTML -= 1
-      itemsLeft[index].innerHTML = parseInt(itemsLeft[index].innerHTML) + 1
+if (sessionStorage.getItem('role') == 'client') {
+  decreaseBtn.forEach((item, index) => {
+    item.addEventListener('click', function checkDecrease() {
+      if (picked[index].innerHTML != '0') {
+        picked[index].innerHTML -= 1
+        itemsLeft[index].innerHTML = parseInt(itemsLeft[index].innerHTML) + 1
 
-      increaseBtn[index].classList.remove('disable')
-      if (picked[index].innerHTML == '0') {
-        decreaseBtn[index].classList.add('disable')
+        increaseBtn[index].classList.remove('disable')
+        if (picked[index].innerHTML == '0') {
+          decreaseBtn[index].classList.add('disable')
+        }
+
+        foodPaid -= itemPrices[index]
+        update()
       }
-
-      foodPaid -= itemPrices[index]
-      update()
-    }
-  })
-})
-
-increaseBtn.forEach((item, index) => {
-  item.addEventListener('click', function checkIncrease() {
-    if (itemsLeft[index].innerHTML != '0') {
-      picked[index].innerHTML = parseInt(picked[index].innerHTML) + 1
-      itemsLeft[index].innerHTML -= 1
-
-      decreaseBtn[index].classList.remove('disable')
-      if (itemsLeft[index].innerHTML == '0') {
-        increaseBtn[index].classList.add('disable')
-      }
-
-      foodPaid += itemPrices[index]
-      update()
-    }
+    })
   })
 
-  if (itemsLeft[index].innerHTML == '0') {
-    increaseBtn[index].classList.add('disable')
+  increaseBtn.forEach((item, index) => {
+    item.addEventListener('click', function checkIncrease() {
+      if (itemsLeft[index].innerHTML != '0') {
+        picked[index].innerHTML = parseInt(picked[index].innerHTML) + 1
+        itemsLeft[index].innerHTML -= 1
+
+        decreaseBtn[index].classList.remove('disable')
+        if (itemsLeft[index].innerHTML == '0') {
+          increaseBtn[index].classList.add('disable')
+        }
+
+        foodPaid += itemPrices[index]
+        update()
+      }
+    })
+
+    if (itemsLeft[index].innerHTML == '0') {
+      increaseBtn[index].classList.add('disable')
+    }
+  })
+
+  // Calculate total paid for food and drinks
+  function update() {
+    document.querySelector('#food-paid > span').innerHTML = format(foodPaid)
+    document.querySelector('#total-paid > span').innerHTML = format(ticketPaid + foodPaid)
   }
-})
-
-// Calculate total paid for food and drinks
-function update() {
-  document.querySelector('#food-paid > span').innerHTML = format(foodPaid)
-  document.querySelector('#total-paid > span').innerHTML = format(ticketPaid + foodPaid)
+}
+else {
+  for (const item of picked) {
+    item.remove()
+  }
+  for (const btn of decreaseBtn) {
+    btn.remove()
+  }
+  for (const btn of increaseBtn) {
+    btn.remove()
+  }
+  document.querySelector('#bottom-content').remove()
 }
