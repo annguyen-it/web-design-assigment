@@ -9,6 +9,13 @@ fetch('/src/includes/sidebar/sidebar.html')
   .then(data => document.querySelector('.sidebar').innerHTML = data)
   .then(() => {
     // Sidebar effect
+    if (sessionStorage.getItem('role') == 'admin') {
+      const employeeLink = document.createElement('a')
+      employeeLink.href = '/main/employee/'
+      employeeLink.title = 'Nhân viên'
+      employeeLink.appendChild(document.createElement('span').appendChild(document.createTextNode('Nhân viên')))
+      document.querySelector('.sidebar__nav').appendChild(employeeLink)
+    }
 
     document.querySelector('.sidebar__button').addEventListener('click', e => {
       expandSidebar()

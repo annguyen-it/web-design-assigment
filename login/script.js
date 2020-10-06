@@ -1,11 +1,13 @@
+// Validate function
+
 let notificationArea = document.querySelector('.notification')
 
 function validate() {
   let username = document.getElementById('username').value
   let password = document.getElementById('password').value
 
-  if (username == 'mod' && password == 'pass') {
-    sessionStorage.setItem('role', 'mod')
+  if (username == 'client' && password == 'pass') {
+    sessionStorage.setItem('role', 'client')
     window.location.replace('/main/')
   }
   else if (username == 'admin' && password == 'pass') {
@@ -25,10 +27,12 @@ function validate() {
   }
 }
 
+// Display notification when login information is not accepted
 function hideNotification() {
   document.querySelector('.notification').classList.add('hide')
 }
 
+// Hide notification when press information
 document.querySelector('#password').addEventListener('keypress', e => {
   if (e.key === 'Enter') {
     validate()
