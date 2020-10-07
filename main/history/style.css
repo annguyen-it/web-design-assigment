@@ -26,7 +26,8 @@ td {
 }
 
 th:nth-child(5),
-th:nth-child(6) {
+th:nth-child(6),
+th:nth-child(7) {
   min-width: 90px;
 }
 
@@ -40,7 +41,7 @@ body.dark td {
 
 .container main {
   text-align: center;
-  width: 100%;
+  max-width: 2000px;
 }
 
 /* pagination */
