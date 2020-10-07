@@ -1,3 +1,5 @@
+
+document.addEventListener('DOMContentLoaded', init, false)
 RandomAlgorithm()
 
 var Pagination = {
@@ -138,8 +140,6 @@ var init = function () {
   })
 }
 
-document.addEventListener('DOMContentLoaded', init, false)
-
 // Random information
 function RandomAlgorithm() {
   let table = document.querySelector('.table > table')
@@ -253,6 +253,7 @@ function RandomAlgorithm() {
   window.scrollTo(0, 0)
 }
 
+// Format time
 function format(str) {
   if (+str <= 9) {
     return '0' + str
