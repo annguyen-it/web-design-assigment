@@ -22,7 +22,8 @@ td {
   border: 1px solid var(--main-red);
   padding: 8px;
 }
-.container main.main {
+
+.container main {
   text-align: center;
   padding-left: 31px;
   padding-right: 0;
