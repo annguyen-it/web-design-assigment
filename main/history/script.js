@@ -253,6 +253,7 @@ function RandomAlgorithm() {
   window.scrollTo(0, 0)
 }
 
+// Format time
 function format(str) {
   if (+str <= 9) {
     return '0' + str

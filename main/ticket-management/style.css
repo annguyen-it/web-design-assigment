@@ -12,7 +12,7 @@
 
   list-style-type: none;
   border-top: 3px var(--main-red) solid;
-  background: #fefefe;
+  background: var(--background-color);
   transition: all 0.1s ease;
   z-index: 1;
 }
@@ -108,25 +108,25 @@
 }
 
 .tab-control:nth-child(1):checked ~ ul.scroll > li:nth-child(1) > label {
-  color: #fefefe;
+  color: #fefefe !important;
 }
 .tab-control:nth-child(2):checked ~ ul.scroll > li:nth-child(2) > label {
-  color: #fefefe;
+  color: #fefefe !important;
 }
 .tab-control:nth-child(3):checked ~ ul.scroll > li:nth-child(3) > label {
-  color: #fefefe;
+  color: #fefefe !important;
 }
 .tab-control:nth-child(4):checked ~ ul.scroll > li:nth-child(4) > label {
-  color: #fefefe;
+  color: #fefefe !important;
 }
 .tab-control:nth-child(5):checked ~ ul.scroll > li:nth-child(5) > label {
-  color: #fefefe;
+  color: #fefefe !important;
 }
 .tab-control:nth-child(6):checked ~ ul.scroll > li:nth-child(6) > label {
-  color: #fefefe;
+  color: #fefefe !important;
 }
 .tab-control:nth-child(7):checked ~ ul.scroll > li:nth-child(7) > label {
-  color: #fefefe;
+  color: #fefefe !important;
 }
 
 .list > li > label {

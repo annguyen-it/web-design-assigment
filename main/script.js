@@ -3,6 +3,14 @@ if (!sessionStorage.getItem('role')) {
   window.location.replace('/login/')
 }
 
+// Set theme
+if (!sessionStorage.getItem('theme')) {
+  document.querySelector('body').classList.remove('dark')
+}
+else {
+  document.querySelector('body').classList.add('dark')
+}
+
 // Include sidebar
 fetch('/src/includes/sidebar/sidebar.html')
   .then(res => res.text())
@@ -52,5 +60,6 @@ function expandSidebar() {
 // Logout function
 function logout() {
   sessionStorage.removeItem('role')
+  sessionStorage.removeItem('theme')
   window.location.reload('/login/')
 }

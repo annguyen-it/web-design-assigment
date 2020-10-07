@@ -1,23 +1,18 @@
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 th {
-  background-color: var(--main-red);
-  border: 1px solid white;
-  border-top: 1px solid var(--main-red);
-  color: white;
   padding: 8px;
+  color: #fefefe;
+  background-color: var(--main-red);
+  border: 1px solid #fefefe;
 }
 
-th:nth-child(1) {
-  border-left: 1px solid var(--main-red);
-}
-
-th:nth-child(10) {
-  border-right: 1px solid var(--main-red);
+body.dark th {
+  border-color: var(--text-color);
 }
 
 td {
@@ -25,9 +20,11 @@ td {
   padding: 8px;
 }
 
-.container main.main {
+body.dark td {
+  border-color: var(--main-text-color);
+}
+
+.container main {
   text-align: center;
-  padding-left: 31px;
-  padding-right: 0;;
-  max-width: 2000px;
+  width: 100%;
 }
