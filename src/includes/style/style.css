@@ -12,6 +12,9 @@
   --main-pink: #ff62b0;
   --main-brown: #b11500;
   --main-yellow: #fccc1d;
+
+  --text-color: var(--main-black);
+  --background-color: #fefefe;
 }
 
 * {
@@ -24,10 +27,21 @@
 body {
   font-family: 'IBM Plex Sans';
   font-size: 14px;
-  color: var(--main-black);
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+body.dark {
+  --text-color: var(--main-white);
+  --background-color: var(--main-black);
 }
 
 a {
+  color: var(--text-color);
+}
+
+body.dark .sidebar__nav a,
+body.dark .sidebar__direct a {
   color: var(--main-black);
 }
 
@@ -38,7 +52,7 @@ a {
   position: fixed;
   margin-left: calc(max(calc(-30% + 30px), -270px));
 
-  padding: 10rem 0 20rem;
+  padding: 5rem 0 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +79,6 @@ a {
 .sidebar__logo {
   display: flex;
   justify-content: center;
-  transform: translateY(-4rem);
 }
 
 .logo {
@@ -76,7 +89,7 @@ a {
 
 .sidebar__nav {
   width: 100%;
-  padding-bottom: 5rem;
+  margin: 2rem 0 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -97,7 +110,7 @@ a {
 
 .sidebar__nav a:hover {
   background: var(--main-red);
-  color: var(--main-black);
+  color: var(--text-color);
 }
 
 .sidebar_nav a span {
@@ -159,6 +172,7 @@ a {
 }
 
 .container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

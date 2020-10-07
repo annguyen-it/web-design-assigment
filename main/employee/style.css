@@ -1,0 +1,30 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  padding: 8px;
+  color: #fefefe;
+  background-color: var(--main-red);
+  border: 1px solid #fefefe;
+}
+
+body.dark th {
+  border-color: var(--text-color);
+}
+
+td {
+  border: 1px solid var(--main-red);
+  padding: 8px;
+}
+
+body.dark td {
+  border-color: var(--main-text-color);
+}
+
+.container main {
+  text-align: center;
+  width: 100%;
+}
