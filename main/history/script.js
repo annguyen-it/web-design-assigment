@@ -1,5 +1,3 @@
-
-document.addEventListener('DOMContentLoaded', init, false)
 RandomAlgorithm()
 
 var Pagination = {
@@ -139,6 +137,8 @@ var init = function () {
     step: 3   // pages before and after current
   })
 }
+
+document.addEventListener('DOMContentLoaded', init, false)
 
 // Random information
 function RandomAlgorithm() {
