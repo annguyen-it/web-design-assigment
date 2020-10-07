@@ -1,7 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 th {
@@ -28,17 +32,21 @@ td {
 .container main.main {
   text-align: center;
   padding-left: 31px;
-  padding-right: 0;;
+  padding-right: 0;
   max-width: 2000px;
 }
 
 /* pagination */
 
 #pagination {
-  margin-top: 21px;
+  margin-top: 3rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-#pagination a, #pagination i {
+#pagination a,
+#pagination i {
   display: inline-block;
   width: 42px;
 }
@@ -53,7 +61,6 @@ td {
   border: 1px solid var(--main-red);
   background-color: var(--main-red);
   color: white;
-
 }
 
 #pagination i {
