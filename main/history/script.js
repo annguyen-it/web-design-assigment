@@ -48,7 +48,6 @@ var Pagination = {
 
   // next page
   Next: function () {
-    ``
     Pagination.page++
     if (Pagination.page > Pagination.size) {
       Pagination.page = Pagination.size
@@ -192,12 +191,18 @@ function RandomAlgorithm() {
   // Time
   let times = document.querySelectorAll('table tr:not(:first-child) td:nth-child(5)')
   times.forEach(item => {
-    let hour = format(Math.round(Math.random() * 23))
+    let intHour = Math.round(Math.random() * 23)
+    let hour = format(intHour)
     let minute = format(Math.round(Math.random() * 59))
-    let day = format(Math.round(Math.random() * 27))
-    let month = format(Math.round(Math.random() * 12))
+    let day = format(Math.round(Math.random() * 27+1))
+    let month = format(Math.round(Math.random() * 12+1))
     let year = 2020
-    item.innerHTML = hour + ':' + minute + '<br>' + day + '-' + month + '-' + year
+    if (intHour < 12){
+      item.innerHTML = hour + ':' + minute + ' AM' + '<br>' + day + '-' + month + '-' + year
+    }
+    else { 
+      item.innerHTML = hour + ':' + minute + ' PM' + '<br>' + day + '-' + month + '-' + year
+    }
   })
 
   // Buyer
@@ -216,7 +221,7 @@ function RandomAlgorithm() {
   // Buy date
   let buyDates = document.querySelectorAll('table tr:not(:first-child) td:nth-child(7)')
   buyDates.forEach((item, index) => {
-    item.innerHTML = times[index].innerHTML.substr(9, 10)
+    item.innerHTML = times[index].innerHTML.substr(12, 13)
   })
 
   // Number of tickets
