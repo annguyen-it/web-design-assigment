@@ -1,0 +1,108 @@
+:root {
+  --border-color: var(--main-red);
+}
+
+body.dark {
+  --border-color: var(--main-grey);
+}
+
+.container main {
+  margin-top: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  border: 3px solid var(--border-color);
+}
+
+.item {
+  height: 70px;
+  margin: 0 3rem;
+  padding: 0 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 18px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid var(--main-red);
+}
+
+.role {
+  font-size: 14px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info > div {
+  position: relative;
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+}
+
+.detail {
+  cursor: pointer;
+}
+
+.info i {
+  margin-right: 5px;
+}
+
+#notification {
+  bottom: -25px;
+  left: 0;
+  position: absolute;
+
+  padding: 3px 7px;
+  background: var(--main-green);
+  border-radius: 0.5em;
+
+  font-size: 14px;
+  transition: all 0.25s ease;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+#notification.hide {
+  color: transparent;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+#notification::before {
+  content: '';
+  left: calc(50% - 8px);
+  top: -2px;
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  background: var(--main-green);
+
+  transform: rotate(-45deg);
+  transition: all 0.25s ease;
+  z-index: -1;
+}
+
+#notification.hide::before {
+  background: transparent;
+}
