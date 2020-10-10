@@ -26,8 +26,8 @@ body.dark td {
 }
 
 .container main {
+  margin-top: 0;
   text-align: center;
-  width: 100%;
 }
 
 /* pagination */
