@@ -191,13 +191,12 @@ function RandomAlgorithm() {
   // Time
   let times = document.querySelectorAll('table tr:not(:first-child) td:nth-child(5)')
   times.forEach(item => {
-    let intHour = Math.round(Math.random() * 23)
-    let hour = format(intHour)
+    let hour = format(Math.round(Math.random() * 23))
     let minute = format(Math.round(Math.random() * 59))
     let day = format(Math.round(Math.random() * 27+1))
     let month = format(Math.round(Math.random() * 12+1))
     let year = 2020
-    if (intHour < 12){
+    if (hour < 12){
       item.innerHTML = hour + ':' + minute + ' AM' + '<br>' + day + '-' + month + '-' + year
     }
     else { 
