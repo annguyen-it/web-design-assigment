@@ -1,6 +1,14 @@
-// Validate function
-
-let notificationArea = document.querySelector('.notification')
+// Hide notification when press information
+document.querySelector('#password').addEventListener('keypress', e => {
+  if (e.key === 'Enter') {
+    validate()
+  }
+})
+document.querySelector('#username').addEventListener('keypress', e => {
+  if (e.key === 'Enter') {
+    validate()
+  }
+})
 
 function validate() {
   let username = document.getElementById('username').value
@@ -15,6 +23,8 @@ function validate() {
     window.location.replace('/main/')
   }
   else {
+    let notificationArea = document.querySelector('.notification')
+
     if (notificationArea.classList.contains('hide')) {
       notificationArea.classList.remove('hide')
     }
@@ -28,18 +38,28 @@ function validate() {
 }
 
 // Display notification when login information is not accepted
+document.querySelectorAll('input').forEach(item => {
+  item.addEventListener('focus', hideNotification)
+  item.addEventListener('input', hideNotification)
+})
+
 function hideNotification() {
   document.querySelector('.notification').classList.add('hide')
 }
 
-// Hide notification when press information
-document.querySelector('#password').addEventListener('keypress', e => {
-  if (e.key === 'Enter') {
-    validate()
-  }
+// Display warning when Caps lock is on
+document.querySelectorAll('input').forEach(item => {
+  item.addEventListener('keyup', checkCapsLock)
+  item.addEventListener('mousedown', checkCapsLock)
 })
-document.querySelector('#username').addEventListener('keypress', e => {
-  if (e.key === 'Enter') {
-    validate()
+
+function checkCapsLock(e) {
+  let capsLockOn = e.getModifierState('CapsLock')
+
+  if (capsLockOn) {
+    this.nextElementSibling.classList.remove('hide')
   }
-})
+  else {
+    this.nextElementSibling.classList.add('hide')
+  }
+}
