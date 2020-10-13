@@ -1,3 +1,8 @@
+// Auto redirect to /main/ if logged in
+if (sessionStorage.getItem('role')) {
+  window.location.replace('/main/')
+}
+
 // Hide notification when press information
 document.querySelector('#password').addEventListener('keypress', e => {
   if (e.key === 'Enter') {
