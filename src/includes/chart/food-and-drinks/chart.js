@@ -1,3 +1,11 @@
+let darkTheme = sessionStorage.getItem('theme') == 'dark'
+let textAxesColor = '#666666'
+let axesColor = '#bbbbbb'
+
+if (darkTheme) {
+  textAxesColor = '#fdf7dc'
+}
+
 // Chart in main/food-and-drinks/index.js
 let ctx = document.getElementById('chart')
 let myChart = new Chart(ctx, {
@@ -15,11 +23,26 @@ let myChart = new Chart(ctx, {
     },
     responsive: true,
     scales: {
+      xAxes: [{
+        gridLines: {
+          display: false,
+        },
+        responsive: true,
+        ticks: {
+          fontColor: textAxesColor
+        },
+      }],
       yAxes: [{
         position: 'left',
+        responsive: true,
         stacked: true,
+        gridLines: {
+          display: true,
+          color: axesColor
+        },
         ticks: {
-          beginAtZero: true
+          beginAtZero: true,
+          fontColor: textAxesColor
         },
       }]
     },
