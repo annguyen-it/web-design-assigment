@@ -25,6 +25,11 @@ td {
   padding: 8px;
 }
 
+th:nth-child(1),
+th:nth-child(10) {
+  border-left: 1px solid var(--main-red);
+}
+
 th:nth-child(5),
 th:nth-child(6),
 th:nth-child(7) {

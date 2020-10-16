@@ -25,6 +25,12 @@ body.dark td {
   border-color: var(--main-text-color);
 }
 
+
+th:nth-child(1),
+th:nth-child(10) {
+  border-left: 1px solid var(--main-red);
+}
+
 .container main {
   margin-top: 0;
   text-align: center;
