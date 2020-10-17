@@ -61,10 +61,8 @@ ul.products-list {
 #bottom-content {
   margin-top: 3rem;
   padding: 0 9rem;
-}
-
-.paid {
-  float: left;
+  display: flex;
+  justify-content: space-around;
 }
 
 .paid table {
@@ -99,8 +97,9 @@ ul.products-list {
   -webkit-user-select: none;
 }
 
-.btn.disable {
-  background: var(--main-grey);
+.disable {
+  background: var(--main-grey) !important;
+  cursor: default !important;
 }
 
 .buttons {

@@ -207,7 +207,7 @@ body.dark .sidebar__direct a {
 
     margin-left: 0;
     margin-top: calc(-100vh + 50px * 2);
-    padding: 5rem 0;
+    padding: 5rem 0 7.5rem;
     background: var(--main-red);
   }
 
@@ -220,8 +220,6 @@ body.dark .sidebar__direct a {
   }
 
   .sidebar__nav a {
-    margin: 1.5rem 0;
-    padding: 1.5rem 0;
     color: var(--main-white);
   }
 
@@ -232,7 +230,6 @@ body.dark .sidebar__direct a {
 
   .sidebar__direct {
     width: 50%;
-    margin-bottom: 15rem;
   }
 
   .sidebar__direct a {

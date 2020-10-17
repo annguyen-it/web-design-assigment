@@ -6,6 +6,7 @@
   --main-red-hover: #f1544b;
   --main-blue-hover: #00fff0;
   --secondary-blue: #3d6cb9;
+  --main-yellow: #fccc1d;
 }
 
 * {
@@ -28,6 +29,11 @@ input {
   outline: none;
 }
 
+.hide {
+  color: transparent !important;
+  visibility: hidden !important;
+}
+
 main {
   padding: 2rem 5rem;
   display: flex;
@@ -46,10 +52,11 @@ form {
 }
 
 form > div {
+  position: relative;
   margin: 0.5rem 0;
 }
 
-form > div > label {
+form > div > label:not(.warning) {
   width: 40%;
   float: left;
 }
@@ -66,8 +73,68 @@ form > div > input:focus {
   box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
 }
 
-input {
+form > div > input {
   border: 1px var(--main-red) solid;
+  z-index: -1;
+}
+
+.warning {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 10px;
+  display: block;
+
+  color: var(--main-yellow);
+  font-size: 18px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.warning-box {
+  position: absolute;
+  top: -30px;
+  right: -35px;
+  padding: 3px 6px;
+
+  visibility: hidden;
+  background: #fefefe;
+  color: transparent;
+  font-size: 12px;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: all 0.07s ease;
+  z-index: 1;
+}
+
+.warning-box::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 4px);
+  bottom: -5px;
+
+  width: 8px;
+  height: 8px;
+  visibility: hidden;
+
+  background: #fefefe;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transform: rotate(-45deg);
+  transition: all 0.03s ease;
+  z-index: 1;
+}
+
+.warning:not(.hide):hover + .warning-box {
+  visibility: visible;
+  color: inherit;
+  border-color: inherit;
+}
+
+.warning:not(.hide):hover + .warning-box::after {
+  visibility: visible;
+  background: #fefefe;
+  border-left-color: inherit;
+  border-bottom-color: inherit;
 }
 
 #login {
@@ -89,9 +156,4 @@ input {
   visibility: visible;
   color: #272343;
   transition: all 0.2s ease;
-}
-
-.notification.hide {
-  visibility: hidden;
-  color: transparent;
 }
