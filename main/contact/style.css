@@ -58,6 +58,14 @@ body.dark {
   align-items: center;
 }
 
+tr:nth-child(2) > .info{
+  margin-right: 5vh;
+}
+
+tr:nth-child(3) > .info{
+  margin-right: 0.5vh;
+}
+
 .detail {
   cursor: pointer;
 }
@@ -82,12 +90,6 @@ body.dark {
   z-index: 1;
 }
 
-#notification.hide {
-  color: transparent;
-  background: transparent;
-  transition: all 0.25s ease;
-}
-
 #notification::before {
   content: '';
   left: calc(50% - 8px);
@@ -101,6 +103,12 @@ body.dark {
   transform: rotate(-45deg);
   transition: all 0.25s ease;
   z-index: -1;
+}
+
+#notification.hide {
+  color: transparent;
+  background: transparent;
+  transition: all 0.25s ease;
 }
 
 #notification.hide::before {

@@ -16,6 +16,10 @@ th {
   padding: 8px;
 }
 
+th:nth-child(7) {
+  width: 90px;
+}
+
 body.dark th {
   border-color: var(--text-color);
 }
