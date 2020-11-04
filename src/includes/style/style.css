@@ -42,7 +42,7 @@ a {
 
 body.dark .sidebar__nav a,
 body.dark .sidebar__direct a {
-  color: var(--main-white);
+  color: var(--main-black);
 }
 
 .sidebar {
@@ -232,6 +232,11 @@ body.dark .sidebar__direct a {
     width: 50%;
   }
 
+  body.dark .sidebar__nav a,
+  body.dark .sidebar__direct a {
+    color: var(--main-white);
+  }
+
   .sidebar__direct a {
     color: var(--main-white);
     transition: all 0.1s ease;
@@ -239,10 +244,6 @@ body.dark .sidebar__direct a {
 
   .sidebar__direct a:hover {
     color: #ffee00;
-  }
-
-  .sidebar__direct a span {
-    color: var(--main-white);
   }
 
   .sidebar__button {
