@@ -42,7 +42,7 @@ a {
 
 body.dark .sidebar__nav a,
 body.dark .sidebar__direct a {
-  color: var(--main-black);
+  color: var(--main-white);
 }
 
 .sidebar {
@@ -72,8 +72,8 @@ body.dark .sidebar__direct a {
 .sidebar:not(.expand) .sidebar__logo,
 .sidebar:not(.expand) .sidebar__nav a {
   background: inherit;
-  cursor: default; 
-  pointer-events: none; 
+  cursor: default;
+  pointer-events: none;
 }
 
 .sidebar__logo {
@@ -111,7 +111,6 @@ body.dark .sidebar__direct a {
 .sidebar__nav a:hover {
   background: var(--main-red);
   color: var(--text-color);
-  
 }
 
 .sidebar_nav a span {
@@ -168,7 +167,8 @@ body.dark .sidebar__direct a {
   display: block;
 }
 
-.hidden {
+.dot.hidden,
+.bar.hidden {
   display: none;
 }
 
@@ -241,6 +241,10 @@ body.dark .sidebar__direct a {
     color: #ffee00;
   }
 
+  .sidebar__direct a span {
+    color: var(--main-white);
+  }
+
   .sidebar__button {
     height: 50px;
     width: 50px;
@@ -252,7 +256,7 @@ body.dark .sidebar__direct a {
   }
 
   .dot {
-    display: none;
+    display: none !important;
   }
 
   .bar {
