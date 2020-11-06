@@ -1,27 +1,33 @@
-main{
-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-margin: auto;
+main {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  margin: auto;
 }
-header{
-    background-color: #f55c54;
-    color: #fefefe;
+
+header {
+  color: #fefefe;
+  background-color: #f55c54;
 }
-p{
-    font-size: medium;
+
+p {
+  font-size: medium;
 }
-/* div{
-    display: block;
-} */
-section{
-    display: flex;
-    justify-content: space-around;
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+    -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
-.ava{
-    border: 5px solid #ddd;
-    border-radius: 100%;
-    margin-top: 20px;
+
+.ava {
+  margin-top: 20px;
+  border: 5px solid #ddd;
+  border-radius: 100%;
 }
-.contain{
-    margin: 20px;
-    clear: none;
+
+.contain {
+  margin: 20px;
+  clear: none;
 }

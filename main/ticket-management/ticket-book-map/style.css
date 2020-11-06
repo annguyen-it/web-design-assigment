@@ -3,8 +3,8 @@ main {
 }
 
 .box {
-  border: 1px solid var(--main-grey);
   padding: 2rem 0;
+  border: 1px solid var(--main-grey);
 }
 
 .info {
@@ -23,7 +23,9 @@ main {
   width: 55%;
   height: 5px;
   background: #000;
-  filter: drop-shadow(0 15px 10px var(--main-red));
+
+  -webkit-filter: drop-shadow(0 15px 10px var(--main-red));
+          filter: drop-shadow(0 15px 10px var(--main-red));
 }
 
 #table {
@@ -35,11 +37,13 @@ table td {
 }
 
 table tr.normal div {
-  box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+  -webkit-box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+          box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
 }
 
 table tr.vip div {
-  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+  -webkit-box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+          box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
 }
 
 table tr.sweetbox div {
@@ -54,33 +58,45 @@ table td:not(.hide) div {
 
   text-align: center;
   cursor: pointer;
-  -moz-user-select: none;
+     -moz-user-select: none;
   -webkit-user-select: none;
 }
 
 table td.choose:not(.taken) div {
   color: var(--main-white);
   background: var(--main-brown);
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 table td.taken div {
   color: var(--main-white);
   background: var(--main-grey);
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: not-allowed;
 }
 
 .notice {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
 }
 
 .notice > div {
   margin: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
 }
 
 .notice > div > div {
@@ -98,11 +114,13 @@ table td.taken div {
 }
 
 .notice > div:nth-child(3) > div {
-  box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+  -webkit-box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
+          box-shadow: inset 1px 1px var(--main-green), inset -1px -1px var(--main-green);
 }
 
 .notice > div:nth-child(4) > div {
-  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+  -webkit-box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+          box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
 }
 
 .notice > div:nth-child(5) > div {
@@ -121,7 +139,11 @@ table td.taken div {
 
 .buttons {
   float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+    -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -133,7 +155,10 @@ table td.taken div {
   color: #fefefe;
   border-radius: 0.5em;
   outline: none;
-  transition: all 0.2s ease;
+
+  -webkit-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
   cursor: pointer;
 }
 

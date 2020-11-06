@@ -11,22 +11,38 @@ body.dark {
 }
 
 .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+
   border-radius: 0.2em;
-  box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
+  -webkit-box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
+          box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
 }
 
 .item {
   height: 70px;
   padding: 0 5rem;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
+          
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
 
   font-size: 18px;
-  -moz-user-select: none;
+     -moz-user-select: none;
   -webkit-user-select: none;
 }
 
@@ -40,8 +56,13 @@ body.dark {
   position: relative;
 
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
 
   background: #fefefe;
   border: 1px solid var(--main-black);
@@ -55,11 +76,19 @@ body.dark {
 
   background: var(--main-red);
   border-radius: 50%;
-  transform: translateX(-10px);
-  transition: all 0.25s ease;
+
+  -webkit-transform: translateX(-10px);
+      -ms-transform: translateX(-10px);
+          transform: translateX(-10px);
+
+  -webkit-transition: all 0.25s ease;
+       -o-transition: all 0.25s ease;
+          transition: all 0.25s ease;
 }
 
 .switch input[type='checkbox']:checked + label > div {
   border: none;
-  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+          transform: translateX(10px);
 }

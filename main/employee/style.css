@@ -1,7 +1,7 @@
 table {
+  width: 100%;
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
 }
 
 th {
@@ -16,8 +16,8 @@ body.dark th {
 }
 
 td {
-  border: 1px solid var(--main-red);
   padding: 8px;
+  border: 1px solid var(--main-red);
 }
 
 body.dark td {

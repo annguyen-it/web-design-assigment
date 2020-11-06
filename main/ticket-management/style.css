@@ -7,32 +7,41 @@
   position: -webkit-sticky;
   position: sticky;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+
+  -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   justify-content: space-between;
 
   list-style-type: none;
   border-top: 3px var(--main-red) solid;
   background: var(--background-color);
-  transition: all 0.1s ease;
-  z-index: 1;
-}
 
-.list * {
-  z-index: 2;
+  -webkit-transition: all 0.1s ease;
+       -o-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+
+  z-index: 1;
 }
 
 .list > li {
   position: relative;
   height: 4.5rem;
   width: 12%;
+
   padding-top: 2rem;
   text-align: center;
-  transition: all 0.3s ease;
+
+  -webkit-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 .list > li > label {
   cursor: pointer;
-  -moz-user-select: none;
+     -moz-user-select: none;
   -webkit-user-select: none;
   z-index: 3;
 }
@@ -41,10 +50,15 @@
   position: absolute;
   bottom: 0;
   left: 50%;
+
   width: 0;
   height: 3px;
   background: var(--main-red);
-  transition: all 0.3s ease;
+
+  -webkit-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  
   z-index: -1;
 }
 
@@ -143,14 +157,28 @@
 
 .content {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+    -ms-flex-pack: distribute;
   justify-content: space-around;
-  transition: all 0.5s ease;
+
+  -webkit-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 
 .content > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+
   width: 100%;
   padding: 1rem 3rem;
   z-index: 0;
@@ -168,7 +196,8 @@
   display: inline-block;
   font-weight: 400;
   font-size: 30px;
-  -moz-user-select: none;
+
+     -moz-user-select: none;
   -webkit-user-select: none;
 }
 
@@ -176,10 +205,12 @@
   display: inline-block;
   margin-left: 1rem;
   padding: 2px 15px;
+
   color: var(--main-white);
   font-family: 'Piazzolla', serif;
   font-size: 20px;
-  -moz-user-select: none;
+
+     -moz-user-select: none;
   -webkit-user-select: none;
 }
 
@@ -200,7 +231,7 @@
 }
 
 .info * {
-  -moz-user-select: none;
+     -moz-user-select: none;
   -webkit-user-select: none;
 }
 
@@ -220,14 +251,26 @@
   width: 65%;
   float: left;
   margin-left: 2rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
 }
 
 .timetable > div {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  
   overflow: auto;
   overflow-wrap: break-word;
 }
@@ -240,12 +283,18 @@
 
   text-align: center;
   text-decoration: none;
-  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
-  transition: all 0.2s ease;
+
+  -webkit-box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+          box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
+
+  -webkit-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 
 .timetable > div > a:hover {
-  box-shadow: inset 2px 2px var(--main-red), inset -2px -2px var(--main-red), 0 0 2px var(--main-red);
+  -webkit-box-shadow: inset 2px 2px var(--main-red), inset -2px -2px var(--main-red), 0 0 2px var(--main-red);
+          box-shadow: inset 2px 2px var(--main-red), inset -2px -2px var(--main-red), 0 0 2px var(--main-red);
 }
 
 .timetable > div > span.option {
@@ -262,7 +311,7 @@
   width: 100%;
   height: 1px;
   margin: 20px 0;
-  background-color: var(--main-red) ;
+  background-color: var(--main-red);
 }
 
 @media (max-width: 800px) {
@@ -273,4 +322,3 @@
     padding: 5px;
   }
 }
-

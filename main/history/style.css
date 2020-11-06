@@ -3,17 +3,18 @@ html {
 }
 
 table {
+  width: 100%;
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
 }
 
 th {
+  padding: 8px;
+  color: #fefefe;
   background-color: var(--main-red);
+
   border: 1px solid #fefefe;
   border-top: 1px solid var(--main-red);
-  color: #fefefe;
-  padding: 8px;
 }
 
 th:nth-child(7) {
@@ -25,8 +26,8 @@ body.dark th {
 }
 
 td {
-  border: 1px solid var(--main-red);
   padding: 8px;
+  border: 1px solid var(--main-red);
 }
 
 th:nth-child(1),
@@ -49,17 +50,17 @@ body.dark td {
 }
 
 .container main {
-  text-align: center;
   max-width: 2000px;
+  text-align: center;
 }
 
 /* pagination */
 
 #pagination {
   margin-top: 3rem;
-  -moz-user-select: none;
+     -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
+      -ms-user-select: none;
 }
 
 #pagination a,
@@ -78,7 +79,10 @@ body.dark td {
   border-radius: 4px;
 
   background-color: var(--main-red);
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+
   cursor: pointer;
 }
 

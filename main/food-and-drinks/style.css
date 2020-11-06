@@ -1,13 +1,21 @@
 #main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
 }
 
 ul.products-list {
+  padding-top: 2.5rem;
   display: block;
   list-style: none;
+
+    -ms-flex-pack: distribute;
   justify-content: space-around;
-  padding-top: 2.5rem;
 }
 
 .item.first {
@@ -21,8 +29,13 @@ ul.products-list {
 }
 
 .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
+
+  -webkit-box-align: stretch;
+     -ms-flex-align: stretch;
+        align-items: stretch;
 }
 
 .item img {
@@ -41,19 +54,31 @@ ul.products-list {
 
 .action {
   margin-top: 0.5rem;
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
 }
 
 .control {
   margin-left: 5px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
 }
 
 .items-left {
-  display: inline-block;
   padding: 3px 10px;
+  display: inline-block;
   border: 1px var(--main-red) solid;
   cursor: default;
 }
@@ -61,7 +86,12 @@ ul.products-list {
 #bottom-content {
   margin-top: 3rem;
   padding: 0 9rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+    -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -79,9 +109,18 @@ ul.products-list {
   height: 20px;
   width: 20px;
   margin: 0 10px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
 
   color: #fefefe;
   font-size: 20px;
@@ -90,10 +129,13 @@ ul.products-list {
 
   border-radius: 50%;
   background: var(--main-red);
-  transition: all 0.2s ease;
+
+  -webkit-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 
   cursor: pointer;
-  -moz-user-select: none;
+     -moz-user-select: none;
   -webkit-user-select: none;
 }
 
@@ -103,10 +145,15 @@ ul.products-list {
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-around;
-  float: right;
   margin-top: 2.5rem;
+  float: right;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+    -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .buttons > input[type='submit'] {
@@ -117,7 +164,11 @@ ul.products-list {
   color: #fefefe;
   border-radius: 0.5em;
   outline: none;
-  transition: all 0.2s ease;
+
+  -webkit-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+
   cursor: pointer;
 }
 
