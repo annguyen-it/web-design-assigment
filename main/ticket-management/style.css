@@ -11,7 +11,6 @@
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-box-pack: justify;
      -ms-flex-pack: justify;
    justify-content: space-between;
 
@@ -20,7 +19,6 @@
   background: var(--background-color);
 
   -webkit-transition: all 0.1s ease;
-       -o-transition: all 0.1s ease;
           transition: all 0.1s ease;
 
   z-index: 1;
@@ -35,7 +33,6 @@
   text-align: center;
 
   -webkit-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
 
@@ -56,7 +53,6 @@
   background: var(--main-red);
 
   -webkit-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
   
   z-index: -1;
@@ -165,7 +161,6 @@
   justify-content: space-around;
 
   -webkit-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
 }
 
@@ -174,8 +169,6 @@
   display: -ms-flexbox;
   display: flex;
 
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
      -ms-flex-direction: column;
          flex-direction: column;
 
@@ -256,8 +249,6 @@
   display: -ms-flexbox;
   display: flex;
 
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
      -ms-flex-direction: column;
          flex-direction: column;
 }
@@ -288,7 +279,6 @@
           box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red);
 
   -webkit-transition: all 0.2s ease;
-       -o-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
 

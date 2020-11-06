@@ -58,23 +58,18 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
      -ms-flex-direction: column;
          flex-direction: column;
 
-  -webkit-box-align: center;
      -ms-flex-align: center;
         align-items: center;
 
-  -webkit-box-pack: justify;
      -ms-flex-pack: justify;
    justify-content: space-between;
 
   background: var(--main-white);
 
   -webkit-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
 
      -moz-user-select: none;
@@ -98,7 +93,6 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
   
-  -webkit-box-pack: center;
      -ms-flex-pack: center;
    justify-content: center;
 }
@@ -119,12 +113,9 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-box-pack: center;
      -ms-flex-pack: center;
    justify-content: center;
 
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
      -ms-flex-direction: column;
          flex-direction: column;
 
@@ -139,11 +130,9 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-box-align: center;
      -ms-flex-align: center;
         align-items: center;
 
-  -webkit-box-pack: center;
      -ms-flex-pack: center;
    justify-content: center;
 
@@ -151,7 +140,6 @@ body.dark .sidebar__direct a {
   text-decoration: none;
 
   -webkit-transition: all 0.1s ease;
-       -o-transition: all 0.1s ease;
           transition: all 0.1s ease;
 }
 
@@ -177,7 +165,6 @@ body.dark .sidebar__direct a {
 
 .sidebar__direct a {
   -webkit-transition: all 0.1s ease;
-       -o-transition: all 0.1s ease;
           transition: all 0.1s ease;
 }
 
@@ -200,11 +187,9 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-box-pack: center;
      -ms-flex-pack: center;
    justify-content: center;
 
-  -webkit-box-align: center;
      -ms-flex-align: center;
         align-items: center;
 
@@ -212,7 +197,6 @@ body.dark .sidebar__direct a {
   border-radius: 50%;
 
   -webkit-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
 
   cursor: pointer;
@@ -243,8 +227,6 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
   
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
      -ms-flex-direction: column;
          flex-direction: column;
 }
@@ -311,7 +293,6 @@ body.dark .sidebar__direct a {
   .sidebar__direct a {
     color: var(--main-white);
     -webkit-transition: all 0.1s ease;
-         -o-transition: all 0.1s ease;
             transition: all 0.1s ease;
   }
 
