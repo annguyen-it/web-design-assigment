@@ -13,15 +13,24 @@
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .page-wrapper {
   width: 100vw;
   height: 100vh;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+     -ms-flex-align: center;
+        align-items: center;
+
+     -ms-flex-pack: center;
+   justify-content: center;
+
   background: var(--main-white);
 }
 
@@ -36,9 +45,15 @@ input {
 
 main {
   padding: 2rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+     -ms-flex-direction: column;
+         flex-direction: column;
+
+     -ms-flex-align: center;
+        align-items: center;
 
   background: #fefefe;
   border: 1px var(--main-red) solid;
@@ -47,8 +62,13 @@ main {
 
 form {
   margin-top: 1rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+
+     -ms-flex-direction: column;
+         flex-direction: column;
 }
 
 form > div {
@@ -66,11 +86,14 @@ form > div > input {
   float: right;
   padding: 0.3rem 0 0.3rem 0.5rem;
   border-radius: 0.2em;
-  transition: all 0.25s ease;
+
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
 }
 
 form > div > input:focus {
-  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
+  -webkit-box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
+          box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
 }
 
 form > div > input {
@@ -86,8 +109,10 @@ form > div > input {
 
   color: var(--main-yellow);
   font-size: 18px;
-  transition: all 0.2s ease;
   cursor: pointer;
+
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 
 .warning-box {
@@ -100,10 +125,13 @@ form > div > input {
   background: #fefefe;
   color: transparent;
   font-size: 12px;
+
   border: 1px solid transparent;
   border-radius: 0.3em;
-  transition: all 0.07s ease;
   z-index: 1;
+
+  -webkit-transition: all 0.07s ease;
+          transition: all 0.07s ease;
 }
 
 .warning-box::after {
@@ -119,8 +147,14 @@ form > div > input {
   background: #fefefe;
   border-left: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  transform: rotate(-45deg);
-  transition: all 0.03s ease;
+
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+
+  -webkit-transition: all 0.03s ease;
+          transition: all 0.03s ease;
+
   z-index: 1;
 }
 
@@ -144,7 +178,10 @@ form > div > input {
   color: var(--main-white);
   background: var(--main-red);
   border-radius: 2em;
-  transition: all 0.25s ease;
+
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+          
   cursor: pointer;
 }
 
@@ -155,5 +192,7 @@ form > div > input {
 .notification {
   visibility: visible;
   color: #272343;
-  transition: all 0.2s ease;
+  
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }

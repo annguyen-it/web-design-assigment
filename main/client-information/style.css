@@ -5,11 +5,11 @@ table {
 }
 
 th {
+  padding: 8px;
+  color: #fefefe;
   background-color: var(--main-red);
   border: 1px solid #fefefe;
   border-top: 1px solid var(--main-red);
-  color: #fefefe;
-  padding: 8px;
 }
 
 body.dark th {
@@ -25,7 +25,6 @@ body.dark td {
   border-color: var(--main-text-color);
 }
 
-
 th:nth-child(1),
 th:nth-child(10) {
   border-left: 1px solid var(--main-red);
@@ -40,9 +39,9 @@ th:nth-child(10) {
 
 #pagination {
   margin-top: 21px;
-  -moz-user-select: none;
+     -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
+      -ms-user-select: none;
 }
 
 #pagination a,
@@ -53,25 +52,26 @@ th:nth-child(10) {
 
 #pagination a {
   padding: 9px;
-  font-size: 19px;
   margin: 0 2px 0 2px;
+
+  color: #fefefe;
+  font-size: 19px;
+  background-color: var(--main-red);
+  
+  border: 1px solid var(--main-red);
   border-radius: 4px;
   cursor: pointer;
-
-  border: 1px solid var(--main-red);
-  background-color: var(--main-red);
-  color: #fefefe;
 }
 
 #pagination i {
   margin: 0 3px 0 3px;
-  font-size: 29px;
   color: var(--main-red);
+  font-size: 29px;
 }
 
 #pagination a.current {
-  background-color: #fefefe;
   color: var(--main-red);
+  background-color: #fefefe;
 }
 
 #pagination a:hover:not(.current) {
