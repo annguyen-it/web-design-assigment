@@ -213,7 +213,7 @@ function RandomAlgorithm() {
       item.innerHTML = buyerList[b]
     }
     else {
-      item.innerHTML = `<a href="/main/client-information/client/${ buyerList[b] }.html">${ buyerList[b] }</a>`
+      item.innerHTML = `<a href="/web-design-assignment/main/client-information/client/${ buyerList[b] }.html">${ buyerList[b] }</a>`
     }
   })
 

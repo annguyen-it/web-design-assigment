@@ -1,6 +1,6 @@
 // Auto redirect to /main/ if logged in
 if (sessionStorage.getItem('role')) {
-  window.location.replace('/main/')
+  window.location.replace('/web-design-assignment/main/')
 }
 
 // Hide notification when press information
@@ -21,11 +21,11 @@ function validate() {
 
   if (username == 'client' && password == 'pass') {
     sessionStorage.setItem('role', 'client')
-    window.location.replace('/main/')
+    window.location.replace('/web-design-assignment/main/')
   }
   else if (username == 'admin' && password == 'pass') {
     sessionStorage.setItem('role', 'admin')
-    window.location.replace('/main/')
+    window.location.replace('/web-design-assignment/main/')
   }
   else {
     let notificationArea = document.querySelector('.notification')
