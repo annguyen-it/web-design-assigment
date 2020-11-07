@@ -14,7 +14,7 @@
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .page-wrapper {
@@ -25,11 +25,11 @@
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
-     -ms-flex-pack: center;
-   justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   background: var(--main-white);
 }
@@ -49,11 +49,11 @@ main {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-direction: column;
-         flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
   background: #fefefe;
   border: 1px var(--main-red) solid;
@@ -67,8 +67,8 @@ form {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-direction: column;
-         flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 form > div {
@@ -88,12 +88,12 @@ form > div > input {
   border-radius: 0.2em;
 
   -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 form > div > input:focus {
   -webkit-box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
-          box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
+  box-shadow: inset 1px 1px var(--main-red), inset -1px -1px var(--main-red), 0 0 2px var(--main-red);
 }
 
 form > div > input {
@@ -112,7 +112,7 @@ form > div > input {
   cursor: pointer;
 
   -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .warning-box {
@@ -131,7 +131,7 @@ form > div > input {
   z-index: 1;
 
   -webkit-transition: all 0.07s ease;
-          transition: all 0.07s ease;
+  transition: all 0.07s ease;
 }
 
 .warning-box::after {
@@ -149,11 +149,11 @@ form > div > input {
   border-bottom: 1px solid transparent;
 
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 
   -webkit-transition: all 0.03s ease;
-          transition: all 0.03s ease;
+  transition: all 0.03s ease;
 
   z-index: 1;
 }
@@ -180,8 +180,8 @@ form > div > input {
   border-radius: 2em;
 
   -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
-          
+  transition: all 0.25s ease;
+
   cursor: pointer;
 }
 
@@ -192,7 +192,15 @@ form > div > input {
 .notification {
   visibility: visible;
   color: #272343;
-  
+
+  text-align: center;
   -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 400px) {
+  main {
+    margin: 0.5rem;
+    padding: 1.5rem 1rem;
+  }
 }
