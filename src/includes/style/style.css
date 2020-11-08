@@ -53,7 +53,7 @@ body.dark .sidebar__direct a {
   position: fixed;
   margin-left: calc(max(calc(-30% + 30px), -270px));
 
-  padding: 4vh 0 20vh;
+  padding: 5vh 0 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
