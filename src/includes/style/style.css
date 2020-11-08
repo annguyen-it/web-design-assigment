@@ -22,7 +22,7 @@
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -46,6 +46,14 @@ body.dark .sidebar__direct a {
   color: var(--main-black);
 }
 
+body.dark .sidebar__direct a:hover {
+  color: var(--main-red);
+}
+
+.page-wrapper {
+  width: 100%;
+}
+
 .sidebar {
   height: 100%;
   width: 30%;
@@ -58,21 +66,21 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-direction: column;
-         flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
-     -ms-flex-pack: justify;
-   justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 
   background: var(--main-white);
 
   -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  transition: all 0.5s ease;
 
-     -moz-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
   z-index: 2;
 }
@@ -92,17 +100,17 @@ body.dark .sidebar__direct a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  
-     -ms-flex-pack: center;
-   justify-content: center;
+
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .logo {
   width: 65%;
   height: auto;
   -webkit-transform: translateX(0.5rem);
-      -ms-transform: translateX(0.5rem);
-          transform: translateX(0.5rem);
+  -ms-transform: translateX(0.5rem);
+  transform: translateX(0.5rem);
 }
 
 .sidebar__nav {
@@ -113,11 +121,11 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-pack: center;
-   justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-     -ms-flex-direction: column;
-         flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
   list-style-type: none;
 }
@@ -130,17 +138,17 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
-     -ms-flex-pack: center;
-   justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   font-size: 18px;
   text-decoration: none;
 
   -webkit-transition: all 0.1s ease;
-          transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .sidebar__nav a:hover {
@@ -159,17 +167,17 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-    -ms-flex-pack: distribute;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
 .sidebar__direct a {
   -webkit-transition: all 0.1s ease;
-          transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .sidebar__direct a:hover {
-  color: var(--main-red) !important;
+  color: var(--main-red);
 }
 
 .sidebar__direct i {
@@ -187,17 +195,17 @@ body.dark .sidebar__direct a {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-pack: center;
-   justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
   background: var(--main-red);
   border-radius: 50%;
 
   -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   cursor: pointer;
 }
@@ -223,12 +231,14 @@ body.dark .sidebar__direct a {
 
 .container {
   min-height: 100vh;
+  width: 100%;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  
-     -ms-flex-direction: column;
-         flex-direction: column;
+
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .container header {
@@ -249,18 +259,18 @@ body.dark .sidebar__direct a {
 
 .container footer {
   height: 3rem;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (max-width: 800px) {
   .sidebar {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     max-width: none;
 
     margin-left: 0;
-    margin-top: calc(-100vh + 50px * 2);
-    padding: 3vh 0 12vh;
+    margin-top: calc(-100vh + 100px);
+    padding: 40px 0 110px;
     background: var(--main-red);
   }
 
@@ -272,7 +282,18 @@ body.dark .sidebar__direct a {
     display: none;
   }
 
+  body.dark .sidebar__nav a,
+  body.dark .sidebar__direct a {
+    color: var(--main-white);
+  }
+
+  body.dark .sidebar__direct a:hover {
+    color: var(--main-yellow);
+  }
+
   .sidebar__nav a {
+    margin: 1.5vh 0;
+    padding: 3vh 0;
     color: var(--main-white);
   }
 
@@ -282,18 +303,13 @@ body.dark .sidebar__direct a {
   }
 
   .sidebar__direct {
-    width: 50%;
-  }
-
-  body.dark .sidebar__nav a,
-  body.dark .sidebar__direct a {
-    color: var(--main-white);
+    width: 60%;
   }
 
   .sidebar__direct a {
     color: var(--main-white);
     -webkit-transition: all 0.1s ease;
-            transition: all 0.1s ease;
+    transition: all 0.1s ease;
   }
 
   .sidebar__direct a:hover {
@@ -319,10 +335,75 @@ body.dark .sidebar__direct a {
   }
 
   .container {
-    padding-top: 10rem;
+    padding-top: 5rem;
   }
 
   .container main {
     padding: 0;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 800px) {
+  .sidebar {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 700px) {
+  .sidebar {
+    margin-top: calc(-100vh + 80px);
+    padding: 20px 0 90px;
+  }
+
+  .sidebar i {
+    font-size: 18px;
+  }
+
+  .sidebar__nav a {
+    margin: 1.2vh 0;
+    padding: 2.5vh 0;
+  }
+
+  .sidebar__button {
+    top: 15px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 600px) {
+  .sidebar {
+    margin-top: calc(-100vh + 60px);
+    padding: 10px 0 70px;
+  }
+
+  .sidebar__nav a {
+    margin: 1.2vh 0;
+    padding: 2vh 0;
+    font-size: 18px;
+  }
+
+  .sidebar__button {
+    height: 40px;
+    width: 40px;
+    top: 10px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 500px) {
+  .sidebar {
+    padding-top: 0;
+  }
+
+  .sidebar__nav a {
+    margin: 1vh 0;
+    padding: 1.5vh 0;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 500px) {
+  .sidebar__nav a {
+    margin: 0.5vh 0;
+    font-size: 17px;
   }
 }

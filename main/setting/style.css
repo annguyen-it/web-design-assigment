@@ -15,12 +15,12 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-direction: column;
-         flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
   border-radius: 0.2em;
   -webkit-box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
-          box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
+  box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
 }
 
 .item {
@@ -31,14 +31,14 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-pack: justify;
-   justify-content: space-between;
-          
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  -ms-flex-align: center;
+  align-items: center;
 
   font-size: 18px;
-     -moz-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
 }
 
@@ -56,8 +56,8 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
   background: #fefefe;
   border: 1px solid var(--main-black);
@@ -73,16 +73,22 @@ body.dark {
   border-radius: 50%;
 
   -webkit-transform: translateX(-10px);
-      -ms-transform: translateX(-10px);
-          transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
 
   -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .switch input[type='checkbox']:checked + label > div {
   border: none;
   -webkit-transform: translateX(10px);
-      -ms-transform: translateX(10px);
-          transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+@media (max-width: 800px) {
+  .container main {
+    width: 90%;
+  }
 }

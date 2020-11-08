@@ -234,7 +234,7 @@ if (sessionStorage.getItem('role') == 'client') {
       document.getElementById('seat-taken').innerHTML = 'Số ghế: ' + (118 - taken) + '/118'
 
       setTimeout(() => {
-        window.location.replace('/main/food-and-drinks/?' + `t=${ cash }`)
+        window.location.replace('/web-design-assignment/main/food-and-drinks/?' + `t=${ cash }`)
       }, 2000)
     }
   }
