@@ -270,7 +270,7 @@ body.dark .sidebar__direct a:hover {
 
     margin-left: 0;
     margin-top: calc(-100vh + 100px);
-    padding: 50px 0 110px;
+    padding: 40px 0 110px;
     background: var(--main-red);
   }
 
@@ -292,8 +292,8 @@ body.dark .sidebar__direct a:hover {
   }
 
   .sidebar__nav a {
-    margin: 1.8% 0;
-    padding: 4% 0;
+    margin: 1.5vh 0;
+    padding: 3vh 0;
     color: var(--main-white);
   }
 
@@ -343,18 +343,13 @@ body.dark .sidebar__direct a:hover {
   }
 }
 
-@media (max-height: 800px) {
+@media (max-width: 800px) and (max-height: 800px) {
   .sidebar {
     padding-top: 20px;
   }
-
-  .sidebar__nav a {
-    margin: 3% 0;
-    padding: 3% 0;
-  }
 }
 
-@media (max-height: 700px) {
+@media (max-width: 800px) and (max-height: 700px) {
   .sidebar {
     margin-top: calc(-100vh + 80px);
     padding: 20px 0 90px;
@@ -365,8 +360,8 @@ body.dark .sidebar__direct a:hover {
   }
 
   .sidebar__nav a {
-    margin: 2% 0;
-    padding: 2.5% 0;
+    margin: 1.2vh 0;
+    padding: 2.5vh 0;
   }
 
   .sidebar__button {
@@ -375,15 +370,15 @@ body.dark .sidebar__direct a:hover {
   }
 }
 
-@media (max-height: 600px) {
+@media (max-width: 800px) and (max-height: 600px) {
   .sidebar {
     margin-top: calc(-100vh + 60px);
     padding: 10px 0 70px;
   }
 
   .sidebar__nav a {
-    margin: 1.5% 0;
-    padding: 2% 0;
+    margin: 1.2vh 0;
+    padding: 2vh 0;
     font-size: 18px;
   }
 
@@ -395,21 +390,20 @@ body.dark .sidebar__direct a:hover {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-width: 800px) and (max-height: 500px) {
   .sidebar {
     padding-top: 0;
   }
 
   .sidebar__nav a {
-    margin: 1% 0;
-    padding: 1.2% 0;
+    margin: 1vh 0;
+    padding: 1.5vh 0;
   }
 }
 
-@media (max-height: 500px) {
+@media (max-width: 800px) and (max-height: 500px) {
   .sidebar__nav a {
-    margin: 1% 0;
-    padding: 1% 0;
+    margin: 0.5vh 0;
     font-size: 17px;
   }
 }
