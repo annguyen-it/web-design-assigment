@@ -15,8 +15,8 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-direction: column;
-         flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
   border-radius: 1em;
   border: 3px solid var(--border-color);
@@ -31,15 +31,15 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-pack: justify;
-   justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
   font-size: 18px;
 
-     -moz-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
 }
 
@@ -56,22 +56,22 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-direction: column;
-         flex-direction: column;
-  
+  -ms-flex-direction: column;
+  flex-direction: column;
+
   float: left;
-  
-     -ms-flex-pack: justify;
-   justify-content: space-between;
+
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  
-     -ms-flex-direction: column;
-         flex-direction: column;
+
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .info > div {
@@ -82,15 +82,15 @@ body.dark {
   display: -ms-flexbox;
   display: flex;
 
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-tr:nth-child(2) > .info{
+tr:nth-child(2) > .info {
   margin-right: 5vh;
 }
 
-tr:nth-child(3) > .info{
+tr:nth-child(3) > .info {
   margin-right: 0.5vh;
 }
 
@@ -113,9 +113,9 @@ tr:nth-child(3) > .info{
   border-radius: 0.5em;
 
   -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  transition: all 0.25s ease;
 
-     -moz-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
 
   z-index: 1;
@@ -133,11 +133,11 @@ tr:nth-child(3) > .info{
   background: var(--main-green);
 
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 
   -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  transition: all 0.25s ease;
 
   z-index: -1;
 }
@@ -147,9 +147,32 @@ tr:nth-child(3) > .info{
   background: transparent;
 
   -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 #notification.hide::before {
   background: transparent;
+}
+
+@media (max-width: 800px) {
+  .container main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  .item {
+    margin: 0 1.5rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    margin: 0 0.5rem;
+  }
+
+  .detail {
+    font-size: 16px;
+  }
 }
