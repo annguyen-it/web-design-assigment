@@ -1,3 +1,11 @@
+let darkTheme = sessionStorage.getItem('theme') == 'dark'
+let textAxesColor = '#666666'
+let axesColor = '#bbbbbb'
+
+if (darkTheme) {
+  textAxesColor = '#fdf7dc'
+}
+
 // Chart in main/overview/index.js
 let ctx = document.getElementById('chart')
 let myChart = new Chart(ctx, {
@@ -17,18 +25,33 @@ let myChart = new Chart(ctx, {
   options: {
     legend: {
       display: true,
-      position: 'bottom',
-      fontSize: '15px'
+      fontColor: textAxesColor,
+      labels: {
+        fontColor: textAxesColor
+      },
+      position: 'bottom'
     },
     responsive: true,
     scales: {
       xAxes: [{
-        stacked: true
-      }],
-      yAxes: [{
+        gridLines: {
+          display: false
+        },
+        responsive: true,
         stacked: true,
         ticks: {
-          beginAtZero: true
+          fontColor: textAxesColor
+        }
+      }],
+      yAxes: [{
+        responsive: true,
+        stacked: true,
+        gridLines: {
+          color: axesColor
+        },
+        ticks: {
+          beginAtZero: true,
+          fontColor: textAxesColor
         }
       }]
     }
