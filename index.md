@@ -1,3 +1,5 @@
+layout: default
+
 ## BÀI TẬP LỚN MÔN THIẾT KẾ WEB
 
 #### Thành viên
