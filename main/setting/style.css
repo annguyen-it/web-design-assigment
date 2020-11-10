@@ -11,9 +11,15 @@ body.dark {
 }
 
 .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-direction: column;
   flex-direction: column;
+
   border-radius: 0.2em;
+  -webkit-box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
   box-shadow: inset 1px 1px var(--border-color), inset -1px -1px var(--border-color);
 }
 
@@ -21,8 +27,14 @@ body.dark {
   height: 70px;
   padding: 0 5rem;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-pack: justify;
   justify-content: space-between;
+
+  -ms-flex-align: center;
   align-items: center;
 
   font-size: 18px;
@@ -39,7 +51,12 @@ body.dark {
   height: 6px;
   position: relative;
 
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-align: center;
   align-items: center;
 
   background: #fefefe;
@@ -54,11 +71,24 @@ body.dark {
 
   background: var(--main-red);
   border-radius: 50%;
+
+  -webkit-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
   transform: translateX(-10px);
+
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
 .switch input[type='checkbox']:checked + label > div {
   border: none;
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
   transform: translateX(10px);
+}
+
+@media (max-width: 800px) {
+  .container main {
+    width: 90%;
+  }
 }

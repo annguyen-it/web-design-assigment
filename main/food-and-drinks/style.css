@@ -1,13 +1,19 @@
 #main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 ul.products-list {
+  padding-top: 2.5rem;
   display: block;
   list-style: none;
+
+  -ms-flex-pack: distribute;
   justify-content: space-around;
-  padding-top: 2.5rem;
 }
 
 .item.first {
@@ -21,7 +27,11 @@ ul.products-list {
 }
 
 .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-align: stretch;
   align-items: stretch;
 }
 
@@ -41,19 +51,29 @@ ul.products-list {
 
 .action {
   margin-top: 0.5rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .control {
   margin-left: 5px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .items-left {
-  display: inline-block;
   padding: 3px 10px;
+  display: inline-block;
   border: 1px var(--main-red) solid;
   cursor: default;
 }
@@ -61,10 +81,13 @@ ul.products-list {
 #bottom-content {
   margin-top: 3rem;
   padding: 0 9rem;
-}
 
-.paid {
-  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .paid table {
@@ -81,8 +104,15 @@ ul.products-list {
   height: 20px;
   width: 20px;
   margin: 0 10px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-pack: center;
   justify-content: center;
+
+  -ms-flex-align: center;
   align-items: center;
 
   color: #fefefe;
@@ -92,6 +122,8 @@ ul.products-list {
 
   border-radius: 50%;
   background: var(--main-red);
+
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 
   cursor: pointer;
@@ -99,15 +131,21 @@ ul.products-list {
   -webkit-user-select: none;
 }
 
-.btn.disable {
-  background: var(--main-grey);
+.disable {
+  background: var(--main-grey) !important;
+  cursor: default !important;
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-around;
-  float: right;
   margin-top: 2.5rem;
+  float: right;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .buttons > input[type='submit'] {
@@ -118,7 +156,10 @@ ul.products-list {
   color: #fefefe;
   border-radius: 0.5em;
   outline: none;
+
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+
   cursor: pointer;
 }
 
@@ -137,4 +178,11 @@ ul.products-list {
 .cancel:hover,
 .btn:not(.disable):hover {
   background: var(--main-red-hover);
+}
+
+@media (max-width: 700px) {
+  .item img {
+    height: 100px;
+    width: 100px;
+  }
 }
