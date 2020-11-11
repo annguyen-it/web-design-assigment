@@ -6,4 +6,7 @@
 - Phạm Tiến Hải (CNTT1 - K60)
 - Phạm Việt Hoàng Minh (CNTT1 - K60)
 
-https://annguyen-it.github.io/web-design-assignment/
+Truy cập tại đây: https://annguyen-it.github.io/web-design-assignment/
+Dùng hai tài khoản có sẵn:
+- username: admin, pass: pass
+- username: client, pass: pass
