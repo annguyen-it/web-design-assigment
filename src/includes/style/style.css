@@ -347,6 +347,11 @@ body.dark .sidebar__direct a:hover {
   .sidebar {
     padding-top: 20px;
   }
+
+  #list-top {
+    position: relative;
+    top: -80px;
+  }
 }
 
 @media (max-width: 800px) and (max-height: 700px) {
@@ -368,6 +373,11 @@ body.dark .sidebar__direct a:hover {
     top: 15px;
     right: 25px;
   }
+
+  #list-top {
+    position: relative;
+    top: -70px;
+  }
 }
 
 @media (max-width: 800px) and (max-height: 600px) {
@@ -388,6 +398,11 @@ body.dark .sidebar__direct a:hover {
     top: 10px;
     right: 20px;
   }
+
+  #list-top {
+    position: relative;
+    top: -50px;
+  }
 }
 
 @media (max-width: 800px) and (max-height: 500px) {
@@ -401,9 +416,10 @@ body.dark .sidebar__direct a:hover {
   }
 }
 
-@media (max-width: 800px) and (max-height: 500px) {
+@media (max-width: 800px) and (max-height: 400px) {
   .sidebar__nav a {
     margin: 0.5vh 0;
     font-size: 17px;
   }
 }
+
