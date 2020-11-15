@@ -1,6 +1,6 @@
 // Redirect if haven't logged in yet
 if (!sessionStorage.getItem('role')) {
-  window.location.replace('/login/')
+  window.location.replace('/web-design-assignment/login/')
 }
 
 // Set theme
@@ -12,14 +12,15 @@ else {
 }
 
 // Include sidebar
-fetch('/src/includes/sidebar/sidebar.html')
-  .then(res => res.text())
+fetch('/web-design-assignment/src/includes/sidebar/sidebar.html')
+  .then(res => res.text()
+  )
   .then(data => document.querySelector('.sidebar').innerHTML = data)
   .then(() => {
     // Sidebar effect
     if (sessionStorage.getItem('role') == 'admin') {
       const employeeLink = document.createElement('a')
-      employeeLink.href = '/main/employee/'
+      employeeLink.href = '/web-design-assignment/main/employee/'
       employeeLink.title = 'Nhân viên'
       employeeLink.appendChild(document.createElement('span').appendChild(document.createTextNode('Nhân viên')))
       document.querySelector('.sidebar__nav').appendChild(employeeLink)
@@ -61,5 +62,5 @@ function expandSidebar() {
 function logout() {
   sessionStorage.removeItem('role')
   sessionStorage.removeItem('theme')
-  window.location.reload('/login/')
+  window.location.reload('/web-design-assignment/login/')
 }
