@@ -30,9 +30,12 @@ td {
   border: 1px solid var(--main-red);
 }
 
-th:nth-child(1),
-th:nth-child(10) {
+th:nth-child(1) {
   border-left: 1px solid var(--main-red);
+}
+
+th:nth-child(10) {
+  border-right: 1px solid var(--main-red);
 }
 
 th:nth-child(5),
@@ -58,9 +61,9 @@ body.dark td {
 
 #pagination {
   margin-top: 3rem;
-     -moz-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
-      -ms-user-select: none;
+  -ms-user-select: none;
 }
 
 #pagination a,
@@ -80,7 +83,7 @@ body.dark td {
 
   background-color: var(--main-red);
   -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
 
   cursor: pointer;
 }
